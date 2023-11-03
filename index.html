@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unreal</title>
     <link rel="stylesheet" href="Estilos/style..css">
+    <link rel="shortcut icon" href="Logos/Logo.png" type="image/x-icon">
 </head>
+
 <body>
-    <header class="container">
+    <header onmouseover="headerOnHover()" onmouseout="headerOnMouseOut()">
+        <div class="headerContainer">
             <nav>
                 <ul class="navnom">
                     <il><a class="color" href="../Pages/catalogos.html">Catalogo</a></il>
@@ -16,8 +20,9 @@
                 </ul>
             </nav>
             <div class="logo">
-                <a href="index.html" class="logo"><img src="Logos/Logo blanco.png" alt="" width="200px"></a>
-            </div>                    
+                <a href="index.html" class="logo"><img id="unrealLogo" src="Logos/Logo blanco.png" alt=""
+                        width="200px"></a>
+            </div>
             <div>
                 <ul class="icon-main">
                     <il><a href="#"><img class="icon" src="Iconos/carrito-de-compras.png" alt=""></a></il>
@@ -26,6 +31,7 @@
                     <il><a href="#"><img class="icon" src="Iconos/menu-hamburguesa.png" alt=""></a></il>
                 </ul>
             </div>
+        </div>
     </header>
     <div class="multi">
         <video muted autoplay loop>
@@ -33,4 +39,6 @@
         </video>
     </div>
 </body>
+<script src="JavaScript/src.js"></script>
+
 </html>
