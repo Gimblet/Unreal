@@ -58,3 +58,26 @@ function imagenesEncabezadoABlanco() {
   iconos[2].setAttribute("src", "../Iconos/busqueda.png");
   iconos[3].setAttribute("src", "../Iconos/menu-hamburguesa.png");
 }
+
+//! ///////////////// Novedades Para Hombres /////////////////////
+//! Se encarga de redimensionar la Seccion Novedades para Hombres (Pantalones)
+
+function calcularMarginTopNovedadesParaHombres() {
+  //Toma el Height del Header y del Video de Fondo para luego restarlo y obtener la distancia casi exacta que suponen ambos contenidos
+  function obtenerDimensionesVideoDeFondo() {
+    return document.getElementById("multi").offsetHeight;
+  }
+  function obtenerDimensionesHeader() {
+    return document.getElementById("headerContainerId").offsetHeight;
+  }
+  return obtenerDimensionesVideoDeFondo() - obtenerDimensionesHeader() - 10;
+}
+
+function redimensionarSegundaSeccion() {
+  document.getElementById("novedadesHombres").style.marginTop = calcularMarginTopNovedadesParaHombres() + "px";
+  setTimeout("redimensionarSegundaSeccion()", 10000);
+}
+
+document.body.setAttribute("onload", "redimensionarSegundaSeccion()")
+
+//? Cambiar nombres de Clase del section para que sea mas legible?
