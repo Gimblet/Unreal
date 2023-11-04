@@ -17,6 +17,10 @@
     padding: 10px;
 }
 
+.navnom{
+    display: flex;
+}
+
 .multi {
     width: 100%;
     object-fit: cover;
