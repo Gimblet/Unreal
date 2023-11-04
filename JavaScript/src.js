@@ -81,4 +81,3 @@ function redimensionarSegundaSeccion() {
 document.body.setAttribute("onload", "redimensionarSegundaSeccion()")
 
 //? Cambiar nombres de Clase del section para que sea mas legible?
-sssssssssssssssssssssssssssssss
