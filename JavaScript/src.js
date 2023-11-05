@@ -78,6 +78,17 @@ function redimensionarSegundaSeccion() {
   setTimeout("redimensionarSegundaSeccion()", 10000);
 }
 
-document.body.setAttribute("onload", "redimensionarSegundaSeccion()")
+//! Se Encarga de Renderizar el Height de la iamgen (Pantalones) de acuerdo a el tamaño de la pantalla
+
+function obtenerHeightPantallaPX() {
+  return window.screen.availHeight + "px";
+}
+
+function modificarHeightNovedadesHombres() {
+  document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
+}
+
+document.body.setAttribute("onload", "redimensionarSegundaSeccion(), modificarHeightNovedadesHombres()");
 
 //? Cambiar nombres de Clase del section para que sea mas legible?
+//TODO Falta Hacer Una función que adapte el height conforme si usuario hace zoom (Tomar en cuenta rendimiento)
