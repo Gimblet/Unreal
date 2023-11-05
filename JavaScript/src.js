@@ -88,6 +88,8 @@ function modificarHeightNovedadesHombres() {
   document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
 }
 
+//Esta funcion devuelve el zoom actual en el navegador ---- Math.round(window.devicePixelRatio * 100);
+
 document.body.setAttribute("onload", "redimensionarSegundaSeccion(), modificarHeightNovedadesHombres()");
 
 //? Cambiar nombres de Clase del section para que sea mas legible?

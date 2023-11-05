@@ -78,24 +78,23 @@ video {
 
 .pant h1 {
     font-family: "QuickSand-Light";
-    letter-spacing: 0.15ch;
-    color: white;
-    text-align: center;
     margin-top: auto;
+    text-align: center;
+    letter-spacing: 0.15ch;
     font-size: 25pt;
+    color: white;
 }
 
 .pant button {
-    border: none;
     font-family: "QuickSand-Regular";
-    letter-spacing: 0.05ch;
-    background-color: white;
-    color: black;
-    padding: 15px 35px 15px 35px;
     margin-bottom: 50px;
     margin-top: 35px;
+    padding: 15px 35px 15px 35px;
+    letter-spacing: 0.05ch;
     font-size: 14pt;
     border-radius: 10px;
-    bottom: 60px;
+    border: none;
+    background-color: white;
+    color: black;
     cursor: pointer;
 }
