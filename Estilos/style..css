@@ -119,9 +119,11 @@ video {
 }
 
 #snakersTitulo {
-    text-decoration: underline;
     text-align: center;
     font-family: "QuickSand-Light";
+    color: black;
+    text-decoration: underline;
+    font-size: 21pt;
 }
 
 .contenedorSnakers {
