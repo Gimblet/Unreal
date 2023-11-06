@@ -17,13 +17,13 @@
     font-family: sans-serif;
 }
 
-header{
+header {
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
-header > * {
+header>* {
     position: relative;
 }
 
@@ -143,10 +143,11 @@ video {
     margin-top: 10px;
 }
 
-.snakers p{
+.snakers p {
     font-family: "QuickSand-Light";
     font-weight: 600;
 }
+
 .carte {
     background-image: url(../Banner/Jpg/Cartera.png);
     background-size: cover;
@@ -157,6 +158,7 @@ video {
     display: flex;
     flex-direction: column;
 }
+
 .carte h1 {
     font-family: "QuickSand-Light";
     margin-top: auto;
@@ -165,6 +167,7 @@ video {
     font-size: 25pt;
     color: white;
 }
+
 .carte button {
     font-family: "QuickSand-Regular";
     margin-bottom: 50px;
@@ -177,4 +180,13 @@ video {
     background-color: white;
     color: black;
     cursor: pointer;
+}
+
+.contenedorFooterContenidos {
+    display: flex;
+}
+
+.contenedorFooterContenidos div h1,
+.contenedorFooterContenidos div h2 {
+    font-family: "QuickSand-Regular";
 }
