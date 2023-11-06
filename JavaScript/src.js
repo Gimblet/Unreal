@@ -62,36 +62,17 @@ function imagenesEncabezadoABlanco() {
 //! ///////////////// Novedades Para Hombres /////////////////////
 //! Se encarga de redimensionar la Seccion Novedades para Hombres (Pantalones)
 
-function calcularMarginTopNovedadesParaHombres() {
-  //Toma el Height del Header y del Video de Fondo para luego restarlo y obtener la distancia casi exacta que suponen ambos contenidos
-  function obtenerDimensionesVideoDeFondo() {
-    return document.getElementById("multi").offsetHeight;
-  }
-  function obtenerDimensionesHeader() {
-    return document.getElementById("headerContainerId").offsetHeight;
-  }
-  return obtenerDimensionesVideoDeFondo() - obtenerDimensionesHeader() - 10;
-}
-
-function redimensionarSegundaSeccion() {
-  document.getElementById("novedadesHombres").style.marginTop = calcularMarginTopNovedadesParaHombres() + "px";
-  setTimeout("redimensionarSegundaSeccion()", 5000);
-}
-
 //! Se Encarga de Renderizar el Height de la iamgen (Pantalones) de acuerdo a el tamaño de la pantalla
 
 function obtenerHeightPantallaPX() {
   return window.innerHeight + "px";
 }
 
-function modificarHeightNovedadesHombres() {
+function modificarHeightSecciones() {
   document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
-}
-
-function modificarHeightSeccionSnakers() {
   document.getElementById("seccionSnakers").style.height = obtenerHeightPantallaPX();
 }
 
-document.body.setAttribute("onload", "modificarHeightNovedadesHombres(), redimensionarSegundaSeccion(), modificarHeightSeccionSnakers()");
+document.body.setAttribute("onload", "modificarHeightSecciones()");
 
 //? Cambiar nombres de Clase del section para que sea mas legible?
