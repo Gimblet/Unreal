@@ -21,12 +21,12 @@ function textoEncabezadoANegro() {
 }
 
 function imagenesEncabezadoANegro() {
-  document.getElementById("unrealLogo").setAttribute("src", "../Logos/Logo negro.png");
+  document.getElementById("unrealLogo").setAttribute("src", "Logos/Logo negro.png");
   let iconos = document.getElementsByClassName("icon");
-  iconos[0].setAttribute("src", "../Iconos/Negro/Ncarrito-de-compras.png");
-  iconos[1].setAttribute("src", "../Iconos/Negro/Nusuario.png");
-  iconos[2].setAttribute("src", "../Iconos/Negro/Nbusqueda.png");
-  iconos[3].setAttribute("src", "../Iconos/Negro/Nmenu-hamburguesa.png");
+  iconos[0].setAttribute("src", "Iconos/Negro/Ncarrito-de-compras.png");
+  iconos[1].setAttribute("src", "Iconos/Negro/Nusuario.png");
+  iconos[2].setAttribute("src", "Iconos/Negro/Nbusqueda.png");
+  iconos[3].setAttribute("src", "Iconos/Negro/Nmenu-hamburguesa.png");
 }
 
 //!Se encarga que al Hacer OnMouseOut en el Header, este cambie a como estaba originalmente (Linea 33 -> Linea 60)
@@ -51,12 +51,12 @@ function textoEncabezadoPorDefecto() {
 }
 
 function imagenesEncabezadoABlanco() {
-  document.getElementById("unrealLogo").setAttribute("src", "../Logos/Logo blanco.png");
+  document.getElementById("unrealLogo").setAttribute("src", "Logos/Logo blanco.png");
   let iconos = document.getElementsByClassName("icon");
-  iconos[0].setAttribute("src", "../Iconos/carrito-de-compras.png");
-  iconos[1].setAttribute("src", "../Iconos/usuario (1).png");
-  iconos[2].setAttribute("src", "../Iconos/busqueda.png");
-  iconos[3].setAttribute("src", "../Iconos/menu-hamburguesa.png");
+  iconos[0].setAttribute("src", "Iconos/carrito-de-compras.png");
+  iconos[1].setAttribute("src", "Iconos/usuario (1).png");
+  iconos[2].setAttribute("src", "Iconos/busqueda.png");
+  iconos[3].setAttribute("src", "Iconos/menu-hamburguesa.png");
 }
 
 //! ///////////////// Novedades Para Hombres /////////////////////
