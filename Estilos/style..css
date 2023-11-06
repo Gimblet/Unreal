@@ -17,9 +17,18 @@
     font-family: sans-serif;
 }
 
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header > * {
+    position: relative;
+}
+
 .headerContainer {
     max-width: 1110px;
-    position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -34,11 +43,11 @@
 .multi {
     width: 100%;
     object-fit: cover;
-    z-index: -1;
-    position: absolute;
 }
 
 video {
+    height: 1440px;
+    object-fit: cover;
     width: 100%;
 }
 
@@ -73,7 +82,7 @@ video {
     background-repeat: no-repeat;
     background-position: center;
     max-height: 1440px;
-    height: fit-content;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -102,7 +111,7 @@ video {
 }
 
 .mejoresSnakers {
-    height: 1080px;
+    height: auto;
     max-height: 1440px;
     display: flex;
     flex-direction: column;
