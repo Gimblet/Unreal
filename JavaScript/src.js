@@ -75,7 +75,7 @@ function calcularMarginTopNovedadesParaHombres() {
 
 function redimensionarSegundaSeccion() {
   document.getElementById("novedadesHombres").style.marginTop = calcularMarginTopNovedadesParaHombres() + "px";
-  setTimeout("redimensionarSegundaSeccion()", 10000);
+  setTimeout("redimensionarSegundaSeccion()", 5000);
 }
 
 //! Se Encarga de Renderizar el Height de la iamgen (Pantalones) de acuerdo a el tamaño de la pantalla
@@ -84,29 +84,10 @@ function obtenerHeightPantallaPX() {
   return window.innerHeight + "px";
 }
 
-// function obtenerNivelZoom() {
-//   return Math.round(window.devicePixelRatio * 100) / 100;
-// }
-
-// function calcularNivel() {
-//   var pantalla = window.screen.availHeight;
-//   let elementoModificar = document.getElementById("novedadesHombres");
-//   if (obtenerNivelZoom() == 1) { return elementoModificar.style.height = obtenerHeightPantallaPX(); }
-//   else if (obtenerNivelZoom() > 1) { return elementoModificar.style.height = ((pantalla * obtenerNivelZoom()) - pantalla) + "px"; }
-//   else { return elementoModificar.style.height = (pantalla * obtenerNivelZoom()) + "px"; }
-// }
-
-// function actualizarZoom() {
-//   calcularNivel();
-//   setTimeout("actualizarZoom()", 3500);
-// }
-
 function modificarHeightNovedadesHombres() {
   document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
 }
 
-document.body.setAttribute("onload", "redimensionarSegundaSeccion(), modificarHeightNovedadesHombres()");
+document.body.setAttribute("onload", "modificarHeightNovedadesHombres(), redimensionarSegundaSeccion()");
 
 //? Cambiar nombres de Clase del section para que sea mas legible?
-//TODO Falta Hacer Una función que adapte el height conforme si usuario hace zoom (Tomar en cuenta rendimiento)
-//Todo actualia funcion cen comentarios con una que reste el height actual con el porcentaje ya trabajado para una experiencia buena
