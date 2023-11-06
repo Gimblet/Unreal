@@ -71,7 +71,9 @@ video {
     background-image: url(../Banner/Jpg/Pantalones.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     max-height: 1440px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
 }
