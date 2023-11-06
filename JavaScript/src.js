@@ -59,10 +59,22 @@ function imagenesEncabezadoABlanco() {
   iconos[3].setAttribute("src", "Iconos/menu-hamburguesa.png");
 }
 
-//! ///////////////// Novedades Para Hombres /////////////////////
-//! Se encarga de redimensionar la Seccion Novedades para Hombres (Pantalones)
+//! Se encarga de Hacer que el Header Se muestre o Oculte segun el usuario hace scroll
+function cambiarColoresHeaderOnScroll() {
+  let header = document.body.querySelector("header").scrollTop;
+  let documento = document.documentElement.scrollTop;
+  if (header > 150 || documento > 150) {
+    headerOnHover();
+  }
+  else if (header < 20 || documento < 20) {
+    headerOnMouseOut();
+  }
+}
 
-//! Se Encarga de Renderizar el Height de la iamgen (Pantalones) de acuerdo a el tamaño de la pantalla
+window.onscroll = function () { cambiarColoresHeaderOnScroll() };
+
+//! ///////////////// SECCIONES /////////////////////
+//! Se Encarga de Renderizar el Height de las secciones de acuerdo a el tamaño de la pantalla
 
 function obtenerHeightPantallaPX() {
   return window.innerHeight + "px";
