@@ -100,3 +100,39 @@ video {
     color: black;
     cursor: pointer;
 }
+
+.mejoresSnakers {
+    height: 1080px;
+    max-height: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#snakersTitulo {
+    text-decoration: underline;
+    text-align: center;
+    font-family: "QuickSand-Light";
+}
+
+.contenedorSnakers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorSnakers button {
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    font-size: 20pt;
+}
+
+.snakers h1 {
+    font-family: "QuickSand-Regular";
+    margin-top: 10px;
+}
+
+.snakers p{
+    font-family: "QuickSand-Light";
+    font-weight: 600;
+}

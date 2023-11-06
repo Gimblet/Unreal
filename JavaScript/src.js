@@ -88,6 +88,10 @@ function modificarHeightNovedadesHombres() {
   document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
 }
 
-document.body.setAttribute("onload", "modificarHeightNovedadesHombres(), redimensionarSegundaSeccion()");
+function modificarHeightSeccionSnakers() {
+  document.getElementById("seccionSnakers").style.height = obtenerHeightPantallaPX();
+}
+
+document.body.setAttribute("onload", "modificarHeightNovedadesHombres(), redimensionarSegundaSeccion(), modificarHeightSeccionSnakers()");
 
 //? Cambiar nombres de Clase del section para que sea mas legible?
