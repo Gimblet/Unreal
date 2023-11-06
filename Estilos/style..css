@@ -145,3 +145,34 @@ video {
     font-family: "QuickSand-Light";
     font-weight: 600;
 }
+.carte {
+    background-image: url(../Banner/Jpg/Cartera.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 1440px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.carte h1 {
+    font-family: "QuickSand-Light";
+    margin-top: auto;
+    text-align: center;
+    letter-spacing: 0.15ch;
+    font-size: 25pt;
+    color: white;
+}
+.carte button {
+    font-family: "QuickSand-Regular";
+    margin-bottom: 50px;
+    margin-top: 35px;
+    padding: 15px 35px 15px 35px;
+    letter-spacing: 0.05ch;
+    font-size: 14pt;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}

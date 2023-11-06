@@ -71,6 +71,7 @@ function obtenerHeightPantallaPX() {
 function modificarHeightSecciones() {
   document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
   document.getElementById("seccionSnakers").style.height = obtenerHeightPantallaPX();
+  document.getElementById("novedadesMujeres").style.height = obtenerHeightPantallaPX();
 }
 
 document.body.setAttribute("onload", "modificarHeightSecciones()");
