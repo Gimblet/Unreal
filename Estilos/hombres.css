@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "QuickSand-Light";
+    src: url("../Fuentes/QuickSand/static/Quicksand-Light.ttf");
+}
+
+@font-face {
+    font-family: "QuickSand-Regular";
+    src: url("../Fuentes/QuickSand/Quicksand-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.headerContainer {
+    max-width: 1110px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navnom {
+    display: flex;
+}
+
+.color {
+    color: white;
+    margin: 0 10px;
+    font-family: "QuickSand-Regular";
+    font-weight: 400;
+    letter-spacing: 0.1ch;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.icon-main {
+    display: flex;
+    padding-left: 20%;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.hombre{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.variedad-pantalones {
+    height: 1080px;
+    max-height: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 900px;
+}
+
+.contenedorPantalones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorPantalones button {
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    font-size: 20pt;
+}
+
+.Pantalones h1 {
+    font-family: "QuickSand-Regular";
+    margin-top: 10px;
+}
+
+.Pantalones p{
+    font-family: "QuickSand-Light";
+    font-weight: 600;
+}

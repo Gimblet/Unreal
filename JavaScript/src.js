@@ -89,3 +89,24 @@ function modificarHeightSecciones() {
 document.body.setAttribute("onload", "modificarHeightSecciones()");
 
 //? Cambiar nombres de Clase del section para que sea mas legible?
+
+// Se hace un efecto cada vez que el mouse pasa por una imagen
+
+function acercarImagen(x)
+{
+    x.style.transform="scale(1.05)";  
+    x.style.transition="all 1s"
+}
+
+function normalImagen(x)
+{
+    x.style.transform="scale(1)";
+    x.style.transition="all 1s"
+}
+
+for(var n=0; n<document.getElementsByClassName("efecto").length; n++)
+{
+    document.getElementsByClassName("efecto")[n].setAttribute("onmouseover", "acercarImagen(this)");
+    document.getElementsByClassName("efecto")[n].setAttribute("onmouseout", "normalImagen(this)");
+
+}
