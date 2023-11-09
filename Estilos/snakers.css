@@ -97,3 +97,79 @@
     font-family: "QuickSand-Light";
     font-weight: 600;
 }
+
+.snakers a:hover{
+    opacity: 0.0;
+}
+
+.efecto1{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Adidas\ Bad\ Bunny\ x\ Forum\ Buckle\ Low\ The\ Last\ Forum/2.png);
+}
+
+.efecto2{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Nike\ Air\ Force\ 1\ Low\ x\ Supreme/2.png);
+}
+
+.efecto3{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Air\ Jordan\ 1\ High\ Retro\ 85\ OG\ Panda/2.png);
+}
+
+.efecto4{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Air\ Jordan\ 1\ Mid\ “Wear-Away”/2.png);
+}
+
+.efecto5{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Air\ Jordan\ 1\ Mid\ Black\ Gym\ Red/2.png);
+}
+
+.efecto6{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Adidas\ Yeezy\ Boost\ 350\ V2\ \'Slate\'/2.png);
+}
+
+.efecto7{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Nike\ Air\ Force\ 1\ Low\ x\ Supreme/2.png);
+}
+
+.efecto8{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-image: url(../Zapatillas/Nike\ Dunk\ High\ \'Blue\ Chill\'/2.png);
+}

@@ -17,9 +17,18 @@
     font-family: sans-serif;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header>* {
+    position: relative;
+}
+
 .headerContainer {
     max-width: 1110px;
-    position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -29,6 +38,17 @@
 
 .navnom {
     display: flex;
+}
+
+.multi {
+    width: 100%;
+    object-fit: cover;
+}
+
+video {
+    height: 1440px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .color {
@@ -73,7 +93,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
-    margin-top: 900px;
 }
 
 .contenedorCarteras {
