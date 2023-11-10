@@ -182,11 +182,74 @@ video {
     cursor: pointer;
 }
 
-.contenedorFooterContenidos {
+.contenedorFooterContenidos,
+.contenedorFooterExtras,
+.footerUbicacion {
     display: flex;
 }
 
-.contenedorFooterContenidos div h1,
-.contenedorFooterContenidos div h2 {
+.contenedorFooterContenidos {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    justify-content: space-around;
+}
+
+hr{
+    height: 2.5px;
+    background-color: black;
+}
+
+.contenedorFooterLinks {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.contenedorFooterContenidos div h1 {
     font-family: "QuickSand-Regular";
+    margin-top: 10px;
+    font-size: 16pt;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contenedorFooterLinks a {
+    font-family: "QuickSand-Regular";
+    font-size: 14pt;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.contenedorFooterExtras {
+    justify-content: space-between;
+}
+
+.contenedorFooterExtras h1 {
+    font-size: 13pt;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.footerRedesSociales {
+    display: flex;
+    gap: 15px;
+}
+
+.footerRedesSociales a {
+    height: max-content;
+}
+
+.footerUbicacion img {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.footerUbicacion h1 {
+    margin: 20px 20px 20px 3.5px;
+}
+
+.footerRSI {
+    width: 30px;
+    height: 30px;
 }
