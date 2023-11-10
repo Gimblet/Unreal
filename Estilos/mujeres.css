@@ -17,6 +17,8 @@
     font-family: sans-serif;
 }
 
+/*! /////////////// Header /////////////// */
+
 header {
     position: fixed;
     width: 100%;
@@ -38,17 +40,6 @@ header>* {
 
 .navnom {
     display: flex;
-}
-
-.multi {
-    width: 100%;
-    object-fit: cover;
-}
-
-video {
-    height: 1440px;
-    object-fit: cover;
-    width: 100%;
 }
 
 .color {
@@ -76,15 +67,20 @@ video {
     margin: 0 10px;
 }
 
-.mujer{
+/*! /////////////////// Video de Fondo //////////////////// */
+
+.multi {
     width: 100%;
-    height: auto;
-    position: absolute;
     object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
+
+video {
+    height: 1440px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/*! //////////////// Seccion Carteras ///////////////// */
 
 .variedad-carteras {
     height: 1080px;
@@ -115,4 +111,80 @@ video {
 .Carteras p{
     font-family: "QuickSand-Light";
     font-weight: 600;
+}
+
+/*! ///////////// Footer /////////////// */
+
+.contenedorFooterContenidos,
+.contenedorFooterExtras,
+.footerUbicacion {
+    display: flex;
+}
+
+.contenedorFooterContenidos {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    justify-content: space-around;
+}
+
+hr {
+    height: 2.5px;
+    background-color: black;
+}
+
+.contenedorFooterLinks {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.contenedorFooterContenidos div h1 {
+    font-family: "QuickSand-Regular";
+    margin-top: 10px;
+    font-size: 16pt;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contenedorFooterLinks a {
+    font-family: "QuickSand-Regular";
+    font-size: 14pt;
+    font-weight: 400;
+    margin-top: 6px;
+    color: black;
+    width: fit-content;
+}
+
+.contenedorFooterExtras {
+    justify-content: space-between;
+}
+
+.contenedorFooterExtras h1 {
+    font-size: 13pt;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.footerRedesSociales {
+    display: flex;
+    gap: 15px;
+}
+
+.footerRedesSociales a {
+    height: max-content;
+}
+
+.footerUbicacion img {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.footerUbicacion h1 {
+    margin: 20px 20px 20px 3.5px;
+}
+
+.footerRSI {
+    width: 30px;
+    height: 30px;
 }
