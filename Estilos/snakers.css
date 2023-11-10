@@ -17,6 +17,19 @@
     font-family: sans-serif;
 }
 
+/*! ////////////////////// Header /////////////////////// */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+header>* {
+    position: relative;
+}
+
 .headerContainer {
     max-width: 1110px;
     position: relative;
@@ -56,15 +69,11 @@
     margin: 0 10px;
 }
 
-.zapas{
+.multi img {
     width: 100%;
-    height: auto;
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
+
+/*! //////////// Seccion Snakers ///////////// */
 
 .mejoresSnakers {
     height: 1080px;
@@ -73,7 +82,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
-    margin-top: 900px;
 }
 
 .contenedorSnakers {
@@ -101,6 +109,8 @@
 .snakers a:hover{
     opacity: 0.0;
 }
+
+/*! ///////////////////// Efectos Zapatillas //////////////////// */
 
 .efecto1{
     width: 400px;
@@ -153,7 +163,7 @@
     display: flex;
     top: 0;
     left: 0;
-    background-image: url(../Zapatillas/Adidas\ Yeezy\ Boost\ 350\ V2\ \'Slate\'/2.png);
+    background-image: url(../Zapatillas/Adidas\ Yeezy\ Boost\ 350\ V2\ Slate/2.png);
 }
 
 .efecto7{
@@ -171,5 +181,81 @@
     display: flex;
     top: 0;
     left: 0;
-    background-image: url(../Zapatillas/Nike\ Dunk\ High\ \'Blue\ Chill\'/2.png);
+    background-image: url(../Zapatillas/Nike\ Dunk\ High\ Blue\ Chill/2.png);
+}
+
+/*! ////////////////////// Footer ////////////////////// */
+
+.contenedorFooterContenidos,
+.contenedorFooterExtras,
+.footerUbicacion {
+    display: flex;
+}
+
+.contenedorFooterContenidos {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    justify-content: space-around;
+}
+
+hr {
+    height: 2.5px;
+    background-color: black;
+}
+
+.contenedorFooterLinks {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.contenedorFooterContenidos div h1 {
+    font-family: "QuickSand-Regular";
+    margin-top: 10px;
+    font-size: 16pt;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contenedorFooterLinks a {
+    font-family: "QuickSand-Regular";
+    font-size: 14pt;
+    font-weight: 400;
+    margin-top: 6px;
+    color: black;
+    width: fit-content;
+}
+
+.contenedorFooterExtras {
+    justify-content: space-between;
+}
+
+.contenedorFooterExtras h1 {
+    font-size: 13pt;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.footerRedesSociales {
+    display: flex;
+    gap: 15px;
+}
+
+.footerRedesSociales a {
+    height: max-content;
+}
+
+.footerUbicacion img {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.footerUbicacion h1 {
+    margin: 20px 20px 20px 3.5px;
+}
+
+.footerRSI {
+    width: 30px;
+    height: 30px;
 }

@@ -81,6 +81,9 @@ function obtenerHeightPantallaPX() {
 }
 
 function modificarHeightSecciones() {
+  if (document.getElementById("seccionVaria") != null) {
+    document.getElementById("seccionVaria").style.height = obtenerHeightPantallaPX();
+  }
   document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
   document.getElementById("seccionSnakers").style.height = obtenerHeightPantallaPX();
   document.getElementById("novedadesMujeres").style.height = obtenerHeightPantallaPX();
@@ -92,21 +95,18 @@ document.body.setAttribute("onload", "modificarHeightSecciones()");
 
 // Se hace un efecto cada vez que el mouse pasa por una imagen
 
-function acercarImagen(x)
-{
-    x.style.transform="scale(1.05)";  
-    x.style.transition="all 1s"
+function acercarImagen(x) {
+  x.style.transform = "scale(1.05)";
+  x.style.transition = "all 1s"
 }
 
-function normalImagen(x)
-{
-    x.style.transform="scale(1)";
-    x.style.transition="all 1s"
+function normalImagen(x) {
+  x.style.transform = "scale(1)";
+  x.style.transition = "all 1s"
 }
 
-for(var n=0; n<document.getElementsByClassName("efecto").length; n++)
-{
-    document.getElementsByClassName("efecto")[n].setAttribute("onmouseover", "acercarImagen(this)");
-    document.getElementsByClassName("efecto")[n].setAttribute("onmouseout", "normalImagen(this)");
+for (var n = 0; n < document.getElementsByClassName("efecto").length; n++) {
+  document.getElementsByClassName("efecto")[n].setAttribute("onmouseover", "acercarImagen(this)");
+  document.getElementsByClassName("efecto")[n].setAttribute("onmouseout", "normalImagen(this)");
 
 }
