@@ -1,3 +1,5 @@
+/*! ////////// Generales Y Utilidades ///////////// */
+
 @font-face {
     font-family: "QuickSand-Light";
     src: url("../Fuentes/QuickSand/static/Quicksand-Light.ttf");
@@ -16,6 +18,8 @@
     list-style: none;
     font-family: sans-serif;
 }
+
+/*! /////////////////// Header /////////////////// */
 
 header {
     position: fixed;
@@ -38,17 +42,6 @@ header>* {
 
 .navnom {
     display: flex;
-}
-
-.multi {
-    width: 100%;
-    object-fit: cover;
-}
-
-video {
-    height: 1440px;
-    object-fit: cover;
-    width: 100%;
 }
 
 .color {
@@ -75,6 +68,21 @@ video {
     height: 20px;
     margin: 0 10px;
 }
+
+/*! /////////////////// Video de Fondo //////////////////// */
+
+.multi {
+    width: 100%;
+    object-fit: cover;
+}
+
+video {
+    height: 1440px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/*! /////////// Seccion Novedades Para Hombres //////////// */
 
 .pant {
     background-image: url(../Banner/Jpg/Pantalones.png);
@@ -109,6 +117,8 @@ video {
     color: black;
     cursor: pointer;
 }
+
+/*! //////////////// Seccion Snakers (Zapatillas) //////////////// */
 
 .mejoresSnakers {
     height: auto;
@@ -147,6 +157,8 @@ video {
     font-family: "QuickSand-Light";
     font-weight: 600;
 }
+
+/*! //////////////////// Seccion Novedades Para Mujeres /////////////////// */
 
 .carte {
     background-image: url(../Banner/Jpg/Cartera.png);
@@ -196,7 +208,7 @@ video {
     justify-content: space-around;
 }
 
-hr{
+hr {
     height: 2.5px;
     background-color: black;
 }
