@@ -182,6 +182,8 @@ video {
     cursor: pointer;
 }
 
+/*! ///////////// Footer /////////////// */
+
 .contenedorFooterContenidos,
 .contenedorFooterExtras,
 .footerUbicacion {
@@ -218,6 +220,8 @@ hr{
     font-size: 14pt;
     font-weight: 400;
     margin-top: 6px;
+    color: black;
+    width: fit-content;
 }
 
 .contenedorFooterExtras {
