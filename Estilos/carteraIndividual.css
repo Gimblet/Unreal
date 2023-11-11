@@ -64,6 +64,81 @@ header {
   margin: 0 10px;
 }
 
+/*! ///////////// Producto ///////////////// */
+
+main{
+  display: flex;
+  margin: 25px;
+  justify-content: space-evenly;
+}
+
+section{
+  width: 30%;
+}
+
+.Producto-Principal{
+  width: 100%;
+}
+
+.Contenedor-Aux{
+  margin-top: 1.5%;
+  display:flex;
+  width: 100%;
+  gap: 2%;
+}
+
+.Producto-Aux{
+  width: 150px;
+}
+
+aside{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Producto-Titulo{
+  font-size: 23pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 600;
+}
+
+.Producto-Precio{
+  font-size: 18pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.Producto-Extra{
+  margin-top: 30px;
+  font-size: 12pt;
+  font-family: "QuickSand-Light";
+  font-weight: bold;
+}
+
+button{
+  margin-top: 35px;
+  background-color: black;
+  width: 80%;
+  height: 60px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+button img{
+  width: 30px;
+}
+
+button p{
+  font-family: "QuickSand-Light";
+  font-size: 15pt;
+  color: white;
+}
+
 /*! ///////////// Footer /////////////// */
 
 .contenedorFooterContenidos,
