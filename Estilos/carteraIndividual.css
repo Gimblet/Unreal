@@ -68,7 +68,7 @@ header {
 
 main{
   display: flex;
-  margin: 250px;
+  margin: 150px 180px 150px 180px;
   justify-content: space-evenly;
 }
 
