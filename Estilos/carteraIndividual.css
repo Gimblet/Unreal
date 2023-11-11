@@ -68,7 +68,7 @@ header {
 
 main{
   display: flex;
-  margin: 25px;
+  margin: 250px;
   justify-content: space-evenly;
 }
 
@@ -81,14 +81,16 @@ section{
 }
 
 .Contenedor-Aux{
-  margin-top: 1.5%;
+  margin-top: 3%;
   display:flex;
   width: 100%;
   gap: 2%;
+  justify-content: space-between;
 }
 
 .Producto-Aux{
-  width: 150px;
+  width: 30%;
+  max-width: 200px;
 }
 
 aside{
