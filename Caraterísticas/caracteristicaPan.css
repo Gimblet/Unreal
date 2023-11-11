@@ -56,10 +56,22 @@
     margin: 0 10px;
 }
 
+/************************Productooooooo**************************/
+
+main{
+    display: flex;
+    margin: 150px 180px 150px 180px;
+    justify-content: space-evenly;
+  }
+  
+  section{
+    width: 100%;
+    display: flex;
+  }
+
 .cargo{
-    width: 400px;
-    height: 600px;
-    margin: 80px 20px 0px 10px;
+    width: 40%;
+    padding: 15px;
 }
 
 .variedad-pantalones {
@@ -84,12 +96,148 @@
     font-size: 20pt;
 }
 
-.Pantalones h1 {
-    font-family: "QuickSand-Regular";
-    margin-top: 10px;
-}
-
-.Pantalones p{
+.pantalon-titulo{
+    font-size: 23pt;
     font-family: "QuickSand-Light";
     font-weight: 600;
+  }
+  
+.pantalon-precio{
+    font-size: 18pt;
+    font-family: "QuickSand-Regular";
+    font-weight: 600;
+    margin-top: 12px;
+  }
+
+.Contenedor-pequeño{
+    margin-top: 3%;
+    width: 100%;
+    gap: 2%;
+    justify-content: space-between;
+  }
+
+  .pant-pequeño{
+    width: 20%;
+    max-width: 200px;
+    border: 1px solid black;
+  }
+
+.Contenedor-Tallas{
+    display: flex;
+    gap: 5%;
+    margin-top: 20px;
+  }
+  
+  .Producto-Tallas{
+    margin-top: 0;
+    width: 16%;
+    height: 45px;
+    max-height: 80px;
+    font-family: "QuickSand-Regular";
+    font-weight: 500;
+    font-size: 14pt;
+    background-color: transparent;
+  }
+
+  h4{
+    font-family: "QuickSand-Regular";
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  
+  button{
+    margin-top: 20px;
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button img{
+    width: 30px;
+  }
+  
+  button p{
+    font-family: "QuickSand-Light";
+    font-size: 15pt;
+    color: white;
+  }
+
+/************************FOOTER***********************/
+
+.contenedorFooterContenidos,
+.contenedorFooterExtras,
+.footerUbicacion {
+  display: flex;
+}
+
+.contenedorFooterContenidos {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  justify-content: space-around;
+}
+
+hr {
+  height: 2.5px;
+  background-color: black;
+}
+
+.contenedorFooterLinks {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.contenedorFooterContenidos div h1 {
+  font-family: "QuickSand-Regular";
+  margin-top: 10px;
+  font-size: 16pt;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.contenedorFooterLinks a {
+  font-family: "QuickSand-Regular";
+  font-size: 14pt;
+  font-weight: 400;
+  margin-top: 6px;
+  color: black;
+  width: fit-content;
+}
+
+.contenedorFooterExtras {
+  justify-content: space-between;
+}
+
+.contenedorFooterExtras h1 {
+  font-size: 13pt;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.footerRedesSociales {
+  display: flex;
+  gap: 15px;
+}
+
+.footerRedesSociales a {
+  height: max-content;
+}
+
+.footerUbicacion img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+
+.footerUbicacion h1 {
+  margin: 20px 20px 20px 3.5px;
+}
+
+.footerRSI {
+  width: 30px;
+  height: 30px;
 }
