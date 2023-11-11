@@ -1,0 +1,240 @@
+/*! ////////// Generales Y Utilidades ///////////// */
+
+@font-face {
+  font-family: "QuickSand-Light";
+  src: url("../Fuentes/QuickSand/static/Quicksand-Light.ttf");
+}
+
+@font-face {
+  font-family: "QuickSand-Regular";
+  src: url("../Fuentes/QuickSand/Quicksand-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+/*! /////////////////// Header /////////////////// */
+
+header {
+  width: 100%;
+  z-index: 1;
+}
+
+.headerContainer {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navnom {
+  display: flex;
+}
+
+.color {
+  color: black;
+  margin: 0 10px;
+  font-family: "QuickSand-Regular";
+  font-weight: 400;
+  letter-spacing: 0.1ch;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.icon-main {
+  display: flex;
+  padding-left: 20%;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+/*! ///////////// Producto ///////////////// */
+
+main{
+  display: flex;
+  margin: 150px 180px 150px 180px;
+  justify-content: space-evenly;
+}
+
+section{
+  width: 30%;
+}
+
+.Producto-Principal{
+  width: 100%;
+}
+
+.Contenedor-Aux{
+  margin-top: 3%;
+  display:flex;
+  width: 100%;
+  gap: 2%;
+  justify-content: space-between;
+}
+
+.Producto-Aux{
+  width: 20%;
+  max-width: 200px;
+}
+
+aside{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+aside h4{
+  margin-top: 30px;
+  font-family: "QuickSand-Light";
+}
+
+.Producto-Titulo{
+  font-size: 23pt;
+  font-family: "QuickSand-Light";
+  font-weight: 600;
+}
+
+.Producto-Precio{
+  font-size: 18pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.Producto-Info{
+  margin-top: 30px;
+  font-size: 12pt;
+  font-family: "QuickSand-Light";
+  font-weight: bold;
+}
+
+.Contenedor-Tallas{
+  display: flex;
+  gap: 5%;
+  margin-top: 20px;
+}
+
+.Producto-Tallas{
+  margin-top: 0;
+  width: 16%;
+  height: 45px;
+  max-height: 80px;
+  font-family: "QuickSand-Regular";
+  font-weight: 500;
+  font-size: 14pt;
+  background-color: transparent;
+}
+
+button{
+  margin-top: 20px;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+button img{
+  width: 30px;
+}
+
+button p{
+  font-family: "QuickSand-Light";
+  font-size: 15pt;
+  color: white;
+}
+
+/*! ///////////// Footer /////////////// */
+
+.contenedorFooterContenidos,
+.contenedorFooterExtras,
+.footerUbicacion {
+  display: flex;
+}
+
+.contenedorFooterContenidos {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  justify-content: space-around;
+}
+
+hr {
+  height: 2.5px;
+  background-color: black;
+}
+
+.contenedorFooterLinks {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.contenedorFooterContenidos div h1 {
+  font-family: "QuickSand-Regular";
+  margin-top: 10px;
+  font-size: 16pt;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.contenedorFooterLinks a {
+  font-family: "QuickSand-Regular";
+  font-size: 14pt;
+  font-weight: 400;
+  margin-top: 6px;
+  color: black;
+  width: fit-content;
+}
+
+.contenedorFooterExtras {
+  justify-content: space-between;
+}
+
+.contenedorFooterExtras h1 {
+  font-size: 13pt;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.footerRedesSociales {
+  display: flex;
+  gap: 15px;
+}
+
+.footerRedesSociales a {
+  height: max-content;
+}
+
+.footerUbicacion img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+
+.footerUbicacion h1 {
+  margin: 20px 20px 20px 3.5px;
+}
+
+.footerRSI {
+  width: 30px;
+  height: 30px;
+}
