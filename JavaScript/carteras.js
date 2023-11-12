@@ -22,14 +22,14 @@ function cambiarAPrimeraImagen() {
       c++;
       var temp = Aux1[i];
       if (posicionNumeroImg() == c) {
-        temp = "2";
+        temp = "3";
       }
       rutaFinal = rutaFinal + temp;
     }
   }
   obtenerRutaFinal();
 
-  document.getElementById("Aux1").setAttribute("src", rutaFinal);
+  document.getElementById("Prod-Main").setAttribute("src", rutaFinal);
 }
 
 document.getElementById("Aux1").addEventListener("click", cambiarAPrimeraImagen);
