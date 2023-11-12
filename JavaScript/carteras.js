@@ -72,4 +72,40 @@ function obtenerInfoProducto() {
   return Producto;
 }
 
-document.getElementById("Btn-Agregar").onclick = obtenerInfoProducto;
+//! Funcion Incompleta
+
+function agregarAlCarrito() {
+  var Producto = obtenerInfoProducto();
+  agregarElementos(Producto);
+}
+
+function agregarElementos(Producto) {
+  function agregarTitulo() {
+    //Obtiene el Titulo y lo Agrega
+    var CTitulo = document.createElement("h4");
+    CTitulo.className = 'ElementoCarrito';
+    CTitulo.innerHTML = Producto[1];
+    document.querySelector("aside").appendChild(CTitulo);
+  }
+  agregarTitulo();
+
+  function agregarPrecio() {
+    //Obtiene el Precio y lo Agrega
+    var CPrecio = document.createElement("h4");
+    CPrecio.className = 'ElementoCarrito';
+    CPrecio.innerHTML = Producto[2];
+    document.querySelector("aside").appendChild(CPrecio);
+  }
+  agregarPrecio();
+
+  function agregarImagen() {
+    //Obtiene la imagen y la Agrega
+    var CImagen = document.createElement("img");
+    CImagen.className = 'ElementoCarritoImg'
+    CImagen.src = Producto[0];
+    document.querySelector("aside").appendChild(CImagen);
+  }
+  agregarImagen();
+}
+
+document.getElementById("Btn-Agregar").onclick = agregarAlCarrito;
