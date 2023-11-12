@@ -50,3 +50,26 @@ document.getElementById("Aux2").onclick = function () {
 document.getElementById("Aux3").onclick = function () {
   cambiarImagenPrincipal("Aux3");
 }
+
+//! /////////////////// Agregar Producto Al carrito /////////////////
+
+function obtenerInfoProducto() {
+  var imagenProducto = document.getElementById("Prod-Main").src;
+  var direccionImagen = '';
+  var tituloProducto = document.getElementById("Producto-Titulo").textContent;
+  var precioProducto = document.getElementById("Producto-Precio").textContent;
+
+  function obtenerDireccionImagen() {
+    for (i = 0; i < imagenProducto.length; i++) {
+      var temp = imagenProducto[i];
+      direccionImagen = direccionImagen + temp;
+    }
+  }
+  obtenerDireccionImagen();
+
+  var Producto = new Array(direccionImagen, tituloProducto, precioProducto);
+
+  return Producto;
+}
+
+document.getElementById("Btn-Agregar").onclick = obtenerInfoProducto;
