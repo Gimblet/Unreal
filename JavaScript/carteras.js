@@ -36,3 +36,17 @@ function cambiarImagenPrincipal(auxn) {
 
   document.getElementById("Prod-Main").setAttribute("src", rutaFinal);
 }
+
+//! Se encarga de llamar la funcion creada Arriba dependiendo en donde se de click
+
+document.getElementById("Aux1").onclick = function () {
+  cambiarImagenPrincipal("Aux1");
+}
+
+document.getElementById("Aux2").onclick = function () {
+  cambiarImagenPrincipal("Aux2");
+}
+
+document.getElementById("Aux3").onclick = function () {
+  cambiarImagenPrincipal("Aux3");
+}

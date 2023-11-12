@@ -93,6 +93,10 @@ section{
   max-width: 200px;
 }
 
+.Producto-Aux:hover{
+  cursor: pointer;
+}
+
 aside{
   width: 30%;
   display: flex;
@@ -139,6 +143,10 @@ button p{
   font-family: "QuickSand-Light";
   font-size: 15pt;
   color: white;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 /*! ///////////// Footer /////////////// */
