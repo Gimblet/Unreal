@@ -1,6 +1,6 @@
-//! ///////////// Cambiar Imagen Segun Click //////////
-function cambiarAPrimeraImagen() {
-  var rutaInicial = document.getElementById("Aux1").src;
+//! ///////////////// Cambiar Imagen Segun Click /////////////
+function cambiarImagenPrincipal(auxn) {
+  var rutaInicial = document.getElementById(auxn).src;
   var Aux1 = new Array(rutaInicial.length);
   var rutaFinal = '';
   var c = 0;
@@ -22,7 +22,18 @@ function cambiarAPrimeraImagen() {
       c++;
       var temp = Aux1[i];
       if (posicionNumeroImg() == c) {
-        temp = "3";
+        if (auxn == "Aux1") {
+          temp = "1";
+        }
+        else if (auxn == "Aux2") {
+          temp = "2";
+        }
+        else if (auxn == "Aux3") {
+          temp = "3";
+        }
+        else {
+          temp = "1";
+        }
       }
       rutaFinal = rutaFinal + temp;
     }
@@ -31,5 +42,3 @@ function cambiarAPrimeraImagen() {
 
   document.getElementById("Prod-Main").setAttribute("src", rutaFinal);
 }
-
-document.getElementById("Aux1").addEventListener("click", cambiarAPrimeraImagen);
