@@ -64,67 +64,124 @@ header {
   margin: 0 10px;
 }
 
+/*! Menu Hamburguesa ALPHA */
+
+.Menu-Prueba {
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  right: 0%;
+  width: 30%;
+  top: 0%;
+  background-color: gray;
+}
+
+#General{
+  display: none;
+}
+
+.topMenu {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.contentMenu{
+  display: flex;
+  flex-direction: column;
+}
+
+.ElementoCarrito {
+  margin: 3% 3% 0% 3%;
+  display:flex;
+  background-color: white;
+}
+
+.Elemento-Img{
+  width: 28%;
+}
+
+.ElementoTexto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.Elemento-Titulo{
+  font-size: 16pt;
+}
+
+.Elemento-Precio{
+  font-size: 14pt;
+}
+
 /*! ///////////// Producto ///////////////// */
 
-main{
+main {
   display: flex;
   margin: 150px 180px 150px 180px;
   justify-content: space-evenly;
 }
 
-section{
+section {
   width: 30%;
 }
 
-.Producto-Principal{
+.Producto-Principal {
   width: 100%;
 }
 
-.Contenedor-Aux{
+.Contenedor-Aux {
   margin-top: 3%;
-  display:flex;
+  display: flex;
   width: 100%;
   gap: 2%;
   justify-content: space-between;
 }
 
-.Producto-Aux{
+.Producto-Aux {
   width: 30%;
   max-width: 200px;
 }
 
-.Producto-Aux:hover{
+.Producto-Aux:hover {
   cursor: pointer;
 }
 
-aside{
+aside {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.Producto-Titulo{
+.Producto-Titulo {
   font-size: 23pt;
   font-family: "QuickSand-Regular";
   font-weight: 600;
 }
 
-.Producto-Precio{
+.Producto-Precio {
   font-size: 18pt;
   font-family: "QuickSand-Regular";
   font-weight: 600;
   margin-top: 12px;
 }
 
-.Producto-Extra{
+.Producto-Extra {
   margin-top: 30px;
   font-size: 12pt;
   font-family: "QuickSand-Light";
   font-weight: bold;
 }
 
-button{
+button {
   margin-top: 35px;
   background-color: black;
   width: 80%;
@@ -135,17 +192,17 @@ button{
   align-items: center;
 }
 
-button img{
+button img {
   width: 30px;
 }
 
-button p{
+button p {
   font-family: "QuickSand-Light";
   font-size: 15pt;
   color: white;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 

@@ -74,38 +74,67 @@ function obtenerInfoProducto() {
 
 //! Funcion Incompleta
 
+var cantidadElementos = 0;
+
 function agregarAlCarrito() {
   var Producto = obtenerInfoProducto();
   agregarElementos(Producto);
+  cantidadElementos++;
 }
 
 function agregarElementos(Producto) {
+  function agregarContenedor() {
+    //Crea el contenedor del Elemento
+    var CContenedor = document.createElement("div");
+    CContenedor.className = "ElementoCarrito" + cantidadElementos + " ElementoCarrito";
+    document.querySelector(".contentMenu").appendChild(CContenedor);
+  }
+  agregarContenedor();
+
+  //Obtiene la imagen y la Agrega
+  function agregarImagen() {
+    var CImagen = document.createElement("img");
+    CImagen.className = 'Elemento-Img'
+    CImagen.src = Producto[0];
+    document.querySelector(".ElementoCarrito" + cantidadElementos).appendChild(CImagen);
+  }
+  agregarImagen();
+
+  function agregarContenedorInterno() {
+    //Crea el contenedor del Titulo y Precio
+    var CContenedor = document.createElement("div");
+    CContenedor.className = "ElementoTexto" + cantidadElementos + " ElementoTexto";
+    document.querySelector(".ElementoCarrito" + cantidadElementos).appendChild(CContenedor);
+  }
+  agregarContenedorInterno();
+
+  //Obtiene el Titulo y lo Agrega
   function agregarTitulo() {
-    //Obtiene el Titulo y lo Agrega
     var CTitulo = document.createElement("h4");
-    CTitulo.className = 'ElementoCarrito';
+    CTitulo.className = 'Elemento-Titulo';
     CTitulo.innerHTML = Producto[1];
-    document.querySelector("aside").appendChild(CTitulo);
+    document.querySelector(".ElementoTexto" + cantidadElementos).appendChild(CTitulo);
   }
   agregarTitulo();
 
+  //Obtiene el Precio y lo Agrega
   function agregarPrecio() {
-    //Obtiene el Precio y lo Agrega
     var CPrecio = document.createElement("h4");
-    CPrecio.className = 'ElementoCarrito';
+    CPrecio.className = 'Elemento-Precio';
     CPrecio.innerHTML = Producto[2];
-    document.querySelector("aside").appendChild(CPrecio);
+    document.querySelector(".ElementoTexto" + cantidadElementos).appendChild(CPrecio);
   }
   agregarPrecio();
+  abrir();
 
-  function agregarImagen() {
-    //Obtiene la imagen y la Agrega
-    var CImagen = document.createElement("img");
-    CImagen.className = 'ElementoCarritoImg'
-    CImagen.src = Producto[0];
-    document.querySelector("aside").appendChild(CImagen);
-  }
-  agregarImagen();
+}
+
+function abrir() {
+  document.getElementById("General").style.display = "block";
+}
+
+function cerrar() {
+  document.getElementById("General").style.display = "none";
 }
 
 document.getElementById("Btn-Agregar").onclick = agregarAlCarrito;
