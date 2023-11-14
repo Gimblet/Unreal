@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "QuickSand-Light";
+    src: url("../Fuentes/QuickSand/static/Quicksand-Light.ttf");
+}
+
+@font-face {
+    font-family: "QuickSand-Regular";
+    src: url("../Fuentes/QuickSand/Quicksand-VariableFont_wght.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+}
+
+.content{
+
+}
+
+.multi{
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+video{
+    height: 1440px;
+    object-fit: cover;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    background-color: white;
+    width: 800px;
+    height: 850px;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 30%;
+}
+
+.logotipo{
+    margin-top: 50px;
+    margin-left: 45%;
+}
+
+.titulo{
+    color: black;
+    font-family: "QuickSand-Light";
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.datos{
+    font-family: "QuickSand-Light";
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.correo{
+    background-color: white;
+    border-radius: 200px;
+    border: 1px solid black;
+    width: 80%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+.contraseña{
+    background-color: white;
+    border-radius: 200px;
+    border: 1px solid black;
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+.extra{
+    font-family: "QuickSand-Light";
+    display: flex;
+    flex-direction: row;
+}
+
+input{
+    accent-color: black;
+}
+
+.recordarme{
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.extra p{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.olvidaste p{
+    margin-left: 330px;
+}
+
+.inicio{
+    text-align: center;
+    margin-top: 40px;   
+}
+
+.boton1{
+    font-family: "QuickSand-Light";
+    background-color: rgb(0, 0, 0);
+    border-radius: 200px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 34%;
+}
+
+.cuenta{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.cuenta h2{
+    margin-top: 40px;
+    margin-left: 30%;
+    font-family: "QuickSand-Light";
+    font-size: 15px;
+}
+
+.cuenta a{
+    font-family: "QuickSand-Light";
+    color: black;
+    margin-top: 40px;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.usando{
+    font-family: "QuickSand-Light"; 
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.google{
+    font-family: "QuickSand-Light";
+    background-color: white;
+    border-radius: 200px;
+    border: 1px solid black;
+    width: 640px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.google h3{
+    margin-top: -30px;
+    margin-left: 220px;
+}
+
+.google img{
+    margin-top: 10px;
+    margin-left: 170px;
+}
+
+.Facebook{
+    font-family: "QuickSand-Light";
+    background-color: #0078da;
+    border-radius: 200px;
+    width: 640px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.Facebook h3{
+    color: white;
+    margin-top: -30px;
+    margin-left: 220px;
+}
+
+.Facebook img{
+    margin-top: 10px;
+    margin-left: 170px;
+}
