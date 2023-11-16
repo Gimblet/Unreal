@@ -89,9 +89,11 @@ function agregarAlCarrito() {
 
 function abrirCarrito() {
   document.getElementById("General").style.display = "block";
+  document.getElementById("dim").style.display = "block";
 }
 
 function cerrarCarrito() {
+  document.getElementById("dim").style.display = "none";
   document.getElementById("General").style.display = "none";
 }
 //? -------------------------------- Session Storage Set (Parte 1) -----------------------------------

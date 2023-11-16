@@ -64,7 +64,7 @@ header {
   margin: 0 10px;
 }
 
-/*! Menu Hamburguesa ALPHA */
+/*! Carrito De Compras */
 
 .Menu-Prueba {
   position: fixed;
@@ -73,39 +73,44 @@ header {
   right: 0%;
   width: 30%;
   top: 0%;
-  background-color: gray;
+  background-color: white;
 }
 
-#General{
+#General {
   display: none;
 }
 
 .topMenu {
   display: flex;
-  gap: 30px;
-  justify-content: center;
+  justify-content: space-around;
   padding-top: 5%;
   padding-bottom: 5%;
-  border: 3px solid black;
   background-color: white;
 }
 
-.contentMenu{
+.topMenu h2,
+.topMenu h3 {
+  font-size: 14pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 550;
+}
+
+.contentMenu {
   display: flex;
   flex-direction: column;
 }
 
 .ElementoCarrito {
-  margin: 3% 3% 0% 3%;
-  display:flex;
+  margin: 4% 2% 0% 13%;
+  display: flex;
   background-color: white;
 }
 
-.Elemento-Img{
+.Elemento-Img {
   width: 28%;
 }
 
-.ElementoTexto{
+.ElementoTexto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,12 +118,24 @@ header {
   text-align: center;
 }
 
-.Elemento-Titulo{
+.Elemento-Titulo {
+  font-family: "QuickSand-Regular";
   font-size: 16pt;
 }
 
-.Elemento-Precio{
+.Elemento-Precio {
+  font-family: "QuickSand-Regular";
   font-size: 14pt;
+}
+
+#dim {
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
 }
 
 /*! ///////////// Producto ///////////////// */
