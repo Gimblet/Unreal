@@ -74,6 +74,7 @@ header {
   width: 30%;
   top: 0%;
   background-color: white;
+  overflow-y: scroll;
 }
 
 #General {
@@ -126,6 +127,33 @@ header {
 .Elemento-Precio {
   font-family: "QuickSand-Regular";
   font-size: 14pt;
+}
+
+.bottomMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorTotalCarrito {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedorTotalCarrito h4{
+  font-size: 14.5pt;
+  font-family: "QuickSand-Regular";
+  margin: 25px;
+  margin-bottom: 0px;
+}
+
+.boton {
+  align-self: center;
+  width: 75%;
+  background-color: Black;
+  color: white;
+  font-family: "QuickSand-Light";
+  font-size: 13pt;
+  margin-bottom: 2.5%;
 }
 
 #dim {
