@@ -1,4 +1,5 @@
-//! ///////////////// Cambiar Imagen Segun Click /////////////
+//! ------------------------------ Cambiar Imagen Segun Click -------------------------------
+
 function cambiarImagenPrincipal(auxn) {
   var rutaInicial = document.getElementById(auxn).src;
   var ArrayAux = new Array(rutaInicial.length);
@@ -51,7 +52,9 @@ document.getElementById("Aux3").onclick = function () {
   cambiarImagenPrincipal("Aux3");
 }
 
-//! /////////////////// Agregar Producto Al carrito /////////////////
+//! -------------------------------- Agregar Producto Al carrito ----------------------------------
+
+//! Obtiene La información del Producto (srcImagen, Titulo y Precio) y almacena esos datos en un array Producto, luego retorna ese Array (56 -> 75)
 
 function obtenerInfoProducto() {
   var imagenProducto = document.getElementById("Prod-Main").src;
@@ -72,15 +75,46 @@ function obtenerInfoProducto() {
   return Producto;
 }
 
-//! Funcion Incompleta
+var cantidadElementos = 0; //Almacena la cantidad de Productos Agregados Al Carrito
 
-var cantidadElementos = 0;
+//! Función Padre, se encarga de llamar Funciones mas complejas dandoles como parametro el Array Producto de la función Anterior (81 -> 85)
 
 function agregarAlCarrito() {
   var Producto = obtenerInfoProducto();
+  guardarElementos(Producto);
   agregarElementos(Producto);
-  cantidadElementos++;
 }
+
+//! Se encarga de Abrir o Cerrar el carrito de Compras
+
+function abrirCarrito() {
+  document.getElementById("General").style.display = "block";
+}
+
+function cerrarCarrito() {
+  document.getElementById("General").style.display = "none";
+}
+//? -------------------------------- Session Storage Set (Parte 1) -----------------------------------
+
+//! Se encarga de Almacenar los Elementos cuando el usuario Hace click en agregar al carrito, Guarda tanto la cantidad de Productos que el usuario Agregó, Asi como la información del producto en si
+
+function guardarElementos(Producto) {
+  function guardarCantidad() {
+    cantidadElementos++;
+    sessionStorage.setItem("cantidadElementos", cantidadElementos); // El Nombre Clave para acceder es Prueba
+  }
+  guardarCantidad();
+
+  function guardarProductos() {
+    var productoAlmacenado = "ProductoAlmacenado" + cantidadElementos;
+    sessionStorage.setItem(productoAlmacenado, JSON.stringify(Producto)); // El Nombre Clave para acceder Es Producto Almacenado + La cantidad de Elementos creados
+  }
+  guardarProductos();
+}
+
+//? ---------------------------------------------------------------------------------------------------
+
+//! Se encarga de Agregar Elementos Tomando los datos del Array Producto que tiene como Parametro (110 -> 154)
 
 function agregarElementos(Producto) {
   function agregarContenedor() {
@@ -125,16 +159,76 @@ function agregarElementos(Producto) {
     document.querySelector(".ElementoTexto" + cantidadElementos).appendChild(CPrecio);
   }
   agregarPrecio();
-  abrir();
 
-}
-
-function abrir() {
-  document.getElementById("General").style.display = "block";
-}
-
-function cerrar() {
-  document.getElementById("General").style.display = "none";
+  abrirCarrito();
 }
 
 document.getElementById("Btn-Agregar").onclick = agregarAlCarrito;
+
+//? -------------------------------------------- Session Storage Get (Parte 2) --------------------------------------
+
+//! Se encarga de Obtener los valores previamente Almacenados
+
+function ObtenerCantidad() {
+  cantidadElementos = Number(sessionStorage.getItem("cantidadElementos"));
+}
+
+//! Obtiene los valores almacenados y los restaura uno a uno (178 -> 228)
+
+function ObtenerProductos() {
+  for (var i = 1; i <= cantidadElementos; i++) {
+    var elementoCarrito = JSON.parse(sessionStorage.getItem("ProductoAlmacenado" + i));
+    agregarElementosExistentes(elementoCarrito, i);
+  }
+}
+
+function agregarElementosExistentes(elementoCarrito, numeroElemento) {
+  function agregarContenedor() {
+    //Crea el contenedor del Elemento
+    var CContenedor = document.createElement("div");
+    CContenedor.className = "ElementoCarrito" + numeroElemento + " ElementoCarrito";
+    document.querySelector(".contentMenu").appendChild(CContenedor);
+  }
+  agregarContenedor();
+
+  //Obtiene la imagen y la Agrega
+  function agregarImagen() {
+    var CImagen = document.createElement("img");
+    CImagen.className = 'Elemento-Img'
+    CImagen.src = elementoCarrito[0];
+    document.querySelector(".ElementoCarrito" + numeroElemento).appendChild(CImagen);
+  }
+  agregarImagen();
+
+  function agregarContenedorInterno() {
+    //Crea el contenedor del Titulo y Precio
+    var CContenedor = document.createElement("div");
+    CContenedor.className = "ElementoTexto" + numeroElemento + " ElementoTexto";
+    document.querySelector(".ElementoCarrito" + numeroElemento).appendChild(CContenedor);
+  }
+  agregarContenedorInterno();
+
+  //Obtiene el Titulo y lo Agrega
+  function agregarTitulo() {
+    var CTitulo = document.createElement("h4");
+    CTitulo.className = 'Elemento-Titulo';
+    CTitulo.innerHTML = elementoCarrito[1];
+    document.querySelector(".ElementoTexto" + numeroElemento).appendChild(CTitulo);
+  }
+  agregarTitulo();
+
+  //Obtiene el Precio y lo Agrega
+  function agregarPrecio() {
+    var CPrecio = document.createElement("h4");
+    CPrecio.className = 'Elemento-Precio';
+    CPrecio.innerHTML = elementoCarrito[2];
+    document.querySelector(".ElementoTexto" + numeroElemento).appendChild(CPrecio);
+  }
+  agregarPrecio();
+}
+
+//? --------------------------------------------------------------------------------------------------------
+
+//! Llama funciones que necesitan ejecutarse antes que todo
+
+document.body.setAttribute("onload", "ObtenerCantidad(), ObtenerProductos()");
