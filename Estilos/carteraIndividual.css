@@ -96,14 +96,21 @@ header {
   font-weight: 550;
 }
 
+.topMenu h3 {
+  cursor: pointer;
+}
+
 .contentMenu {
   display: flex;
   flex-direction: column;
 }
 
 .ElementoCarrito {
-  margin: 4% 2% 0% 13%;
+  margin: 4% 2% 0% 4%;
+  width: 80%;
+  align-self: center;
   display: flex;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 
@@ -139,11 +146,21 @@ header {
   justify-content: space-around;
 }
 
-.contenedorTotalCarrito h4{
+.contenedorTotalCarrito h4 {
   font-size: 14.5pt;
   font-family: "QuickSand-Regular";
   margin: 25px;
   margin-bottom: 0px;
+}
+
+#limpiarCarro {
+  text-decoration: underline;
+  font-family: "QuickSand-Light";
+  font-size: 12pt;
+  cursor: pointer;
+  margin-left: 13%;
+  margin-top: 3%;
+  width: fit-content;
 }
 
 .boton {
@@ -212,6 +229,12 @@ aside {
   font-weight: 600;
 }
 
+.contenedorPrecio {
+  display: flex;
+  gap: 5px;
+}
+
+.Simbolo-Precio,
 .Producto-Precio {
   font-size: 18pt;
   font-family: "QuickSand-Regular";

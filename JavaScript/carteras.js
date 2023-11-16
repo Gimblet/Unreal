@@ -76,6 +76,7 @@ function obtenerInfoProducto() {
 }
 
 var cantidadElementos = 0; //Almacena la cantidad de Productos Agregados Al Carrito
+var precioAcumulado = 0.0;
 
 //! Función Padre, se encarga de llamar Funciones mas complejas dandoles como parametro el Array Producto de la función Anterior (81 -> 85)
 
@@ -85,7 +86,7 @@ function agregarAlCarrito() {
   agregarElementos(Producto);
 }
 
-//! Se encarga de Abrir o Cerrar el carrito de Compras
+//! Se encarga de Abrir , Cerrar o Limpiar el carrito de Compras
 
 function abrirCarrito() {
   document.getElementById("General").style.display = "block";
@@ -96,6 +97,13 @@ function cerrarCarrito() {
   document.getElementById("dim").style.display = "none";
   document.getElementById("General").style.display = "none";
 }
+
+function limpiarCarrito() {
+  sessionStorage.clear();
+  alert("Todos Los Elementos en el carrito fueron Limpiados Correctamente")
+  window.location.reload();
+}
+
 //? -------------------------------- Session Storage Set (Parte 1) -----------------------------------
 
 //! Se encarga de Almacenar los Elementos cuando el usuario Hace click en agregar al carrito, Guarda tanto la cantidad de Productos que el usuario Agregó, Asi como la información del producto en si
@@ -112,11 +120,17 @@ function guardarElementos(Producto) {
     sessionStorage.setItem(productoAlmacenado, JSON.stringify(Producto)); // El Nombre Clave para acceder Es Producto Almacenado + La cantidad de Elementos creados
   }
   guardarProductos();
+
+  function guardarPrecio() {
+    precioAcumulado += Number(Producto[2]);
+    sessionStorage.setItem("PrecioAcumulado", precioAcumulado);
+  }
+  guardarPrecio();
 }
 
 //? ---------------------------------------------------------------------------------------------------
 
-//! Se encarga de Agregar Elementos Tomando los datos del Array Producto que tiene como Parametro (110 -> 154)
+//! Se encarga de Agregar Elementos Tomando los datos del Array Producto que tiene como Parametro (125 -> 172)
 
 function agregarElementos(Producto) {
   function agregarContenedor() {
@@ -157,10 +171,12 @@ function agregarElementos(Producto) {
   function agregarPrecio() {
     var CPrecio = document.createElement("h4");
     CPrecio.className = 'Elemento-Precio';
-    CPrecio.innerHTML = Producto[2];
+    CPrecio.innerHTML = 'S/ ' + Producto[2];
     document.querySelector(".ElementoTexto" + cantidadElementos).appendChild(CPrecio);
   }
   agregarPrecio();
+
+  document.getElementById("precioTotal").innerHTML = "S/ " + ObtenerPrecioAcumulado();
 
   abrirCarrito();
 }
@@ -175,7 +191,11 @@ function ObtenerCantidad() {
   cantidadElementos = Number(sessionStorage.getItem("cantidadElementos"));
 }
 
-//! Obtiene los valores almacenados y los restaura uno a uno (178 -> 228)
+function ObtenerPrecioAcumulado() {
+  return precioAcumulado = Number(sessionStorage.getItem("PrecioAcumulado"));
+}
+
+//! Obtiene los valores almacenados y los restaura uno a uno (184 -> 236)
 
 function ObtenerProductos() {
   for (var i = 1; i <= cantidadElementos; i++) {
@@ -223,14 +243,16 @@ function agregarElementosExistentes(elementoCarrito, numeroElemento) {
   function agregarPrecio() {
     var CPrecio = document.createElement("h4");
     CPrecio.className = 'Elemento-Precio';
-    CPrecio.innerHTML = elementoCarrito[2];
+    CPrecio.innerHTML = 'S/' + elementoCarrito[2];
     document.querySelector(".ElementoTexto" + numeroElemento).appendChild(CPrecio);
   }
   agregarPrecio();
+
+  document.getElementById("precioTotal").innerHTML = "S/ " + ObtenerPrecioAcumulado();
 }
 
 //? --------------------------------------------------------------------------------------------------------
 
 //! Llama funciones que necesitan ejecutarse antes que todo
 
-document.body.setAttribute("onload", "ObtenerCantidad(), ObtenerProductos()");
+document.body.setAttribute("onload", "ObtenerCantidad(), ObtenerProductos()", "ObtenerPrecioAcumulado()");
