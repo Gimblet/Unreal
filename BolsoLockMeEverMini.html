@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Estilos/carteraIndividual.css">
   <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
-  <title>Lock Me Ever Mini</title>
+  <title>Bolso LockMe Ever Mini</title>
 </head>
 
 <body>
+  <div onclick="cerrarCarrito()" id="dim"></div>
   <header>
     <div class="headerContainer" id="headerContainerId">
       <nav>
@@ -25,8 +26,7 @@
       <div>
         <ul class="icon-main">
           <li><a href="#"><img class="icon" onclick="abrirCarrito()" src="Iconos/Negro/Ncarrito-de-compras.png"
-                alt=""></a>
-          </li>
+                alt=""></a></li>
           <li><a href="#"><img class="icon" src="Iconos/Negro/Nusuario.png" alt=""></a></li>
           <li><a href="#"><img class="icon" src="Iconos/Negro/Nbusqueda.png" alt=""></a></li>
           <li><a href="#"><img class="icon" src="Iconos/Negro/Nmenu-hamburguesa.png" alt=""></a></li>
@@ -37,13 +37,18 @@
 
   <div class="Menu-Prueba" id="General">
     <div class="topMenu">
-      <h2>PROTOTIPO CARRITO DE COMPRAS</h2>
+      <h2 onclick="limpiarCarrito()">Mi Colección</h2>
       <h3 onclick="cerrarCarrito()">X</h3>
     </div>
-    <div class="contentMenu">
+    <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
     </div>
     <div class="bottomMenu">
-
+      <div class="contenedorTotalCarrito">
+        <h4>Total</h4>
+        <h4 id="precioTotal">Carrito Vacio</h4>
+      </div>
+      <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+      <button class="boton">Confirmar Compra</button>
     </div>
   </div>
 
@@ -57,8 +62,11 @@
       </div>
     </section>
     <aside>
-      <h1 class="Producto-Titulo" id="Producto-Titulo">Bolso Lock Me Ever Mini</h1>
-      <h3 class="Producto-Precio" id="Producto-Precio">S/1299.90</h3>
+      <h1 class="Producto-Titulo" id="Producto-Titulo">Bolso LockMe Ever Mini</h1>
+      <div class="contenedorPrecio">
+        <h3 class="Simbolo-Precio">S/</h3>
+        <h3 class="Producto-Precio" id="Producto-Precio">1840.00</h3>
+      </div>
       <button id="Btn-Agregar">
         <img src="Iconos/carrito-de-compras.png" alt="">
         <p>Agregar</p>
