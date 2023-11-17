@@ -84,14 +84,12 @@ function modificarHeightSecciones() {
   if (document.getElementById("seccionVaria") != null) {
     document.getElementById("seccionVaria").style.height = obtenerHeightPantallaPX();
   }
-  document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
-  document.getElementById("seccionSnakers").style.height = obtenerHeightPantallaPX();
-  document.getElementById("novedadesMujeres").style.height = obtenerHeightPantallaPX();
+  else {
+    document.getElementById("novedadesHombres").style.height = obtenerHeightPantallaPX();
+    document.getElementById("seccionSnakers").style.height = obtenerHeightPantallaPX();
+    document.getElementById("novedadesMujeres").style.height = obtenerHeightPantallaPX();
+  }
 }
-
-document.body.setAttribute("onload", "modificarHeightSecciones()");
-
-//? Cambiar nombres de Clase del section para que sea mas legible?
 
 // Se hace un efecto cada vez que el mouse pasa por una imagen
 
@@ -111,19 +109,19 @@ for (var n = 0; n < document.getElementsByClassName("efecto").length; n++) {
 
 }
 
-//todo Ordenar
-
 //! Carrito de Compras
 
 //! Se encarga de Abrir , Cerrar o Limpiar el carrito de Compras
 
 function abrirCarrito() {
   document.getElementById("General").style.display = "block";
+  document.querySelector("header").style.opacity = "0"
   document.getElementById("dim").style.display = "block";
 }
 
 function cerrarCarrito() {
   document.getElementById("dim").style.display = "none";
+  document.querySelector("header").style.opacity = "1"
   document.getElementById("General").style.display = "none";
 }
 
@@ -203,6 +201,13 @@ function agregarElementosExistentes(elementoCarrito, numeroElemento) {
 
 //? --------------------------------------------------------------------------------------------------------
 
-//! Llama funciones que necesitan ejecutarse antes que todo
+//! ---------------------------------- On Load ----------------------------------
 
-document.body.setAttribute("onload", "ObtenerCantidad(), ObtenerProductos()", "ObtenerPrecioAcumulado()");
+function funcionesOnLoad() {
+  modificarHeightSecciones();
+  ObtenerCantidad();
+  ObtenerProductos();
+  ObtenerPrecioAcumulado();
+}
+
+document.body.setAttribute("onload", "funcionesOnLoad()")
