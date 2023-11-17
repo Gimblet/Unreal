@@ -68,6 +68,127 @@ header>* {
     margin: 0 10px;
 }
 
+/*! Carrito De Compras */
+
+.Menu-Prueba {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    right: 0%;
+    width: 30%;
+    top: 0%;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+#General {
+    display: none;
+}
+
+.topMenu {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: white;
+}
+
+.topMenu h2,
+.topMenu h3 {
+    font-size: 14pt;
+    font-family: "QuickSand-Regular";
+    font-weight: 550;
+}
+
+.topMenu h3 {
+    cursor: pointer;
+}
+
+.contentMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.ElementoCarrito {
+    margin: 4% 2% 0% 4%;
+    width: 80%;
+    align-self: center;
+    display: flex;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.Elemento-Img {
+    width: 28%;
+}
+
+.ElementoTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.Elemento-Titulo {
+    font-family: "QuickSand-Regular";
+    font-size: 16pt;
+}
+
+.Elemento-Precio {
+    font-family: "QuickSand-Regular";
+    font-size: 14pt;
+}
+
+.bottomMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorTotalCarrito {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorTotalCarrito h4 {
+    font-size: 14.5pt;
+    font-family: "QuickSand-Regular";
+    margin: 25px;
+    margin-bottom: 0px;
+}
+
+#limpiarCarro {
+    text-decoration: underline;
+    font-family: "QuickSand-Light";
+    font-size: 12pt;
+    cursor: pointer;
+    margin-left: 13%;
+    margin-top: 3%;
+    width: fit-content;
+}
+
+.boton {
+    margin-top: 35px;
+    align-self: center;
+    width: 75%;
+    height: 60px;
+    background-color: Black;
+    color: white;
+    font-family: "QuickSand-Light";
+    font-size: 13pt;
+    margin-bottom: 2.5%;
+}
+
+#dim {
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+
 /*! ////////////// Imagen de Fondo ///////////// */
 
 .multi img {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
     <title>Unreal - Hombres</title>
 </head>
+
 <body>
+    <div onclick="cerrarCarrito()" id="dim"></div>
     <header onmouseover="headerOnHover()" onmouseout="headerOnMouseOut()">
         <div class="headerContainer" id="headerContainerId">
             <nav>
@@ -23,7 +26,8 @@
             </div>
             <div>
                 <ul class="icon-main">
-                    <li><a href="#"><img class="icon" src="Iconos/carrito-de-compras.png" alt=""></a></li>
+                    <li><a href="#"><img class="icon" src="Iconos/carrito-de-compras.png" alt=""
+                                onclick="abrirCarrito()"></a></li>
                     <li><a href="#"><img class="icon" src="Iconos/usuario (1).png" alt=""></a></li>
                     <li><a href="#"><img class="icon" src="Iconos/busqueda.png" alt=""></a></li>
                     <li><a href="#"><img class="icon" src="Iconos/menu-hamburguesa.png" alt=""></a></li>
@@ -32,11 +36,32 @@
         </div>
     </header>
 
+    <!-- ! Carrito de Compras -->
+
+    <div class="Menu-Prueba" id="General">
+        <div class="topMenu">
+            <h2>Mi Colección</h2>
+            <h3 onclick="cerrarCarrito()">X</h3>
+        </div>
+        <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+        </div>
+        <div class="bottomMenu">
+            <div class="contenedorTotalCarrito">
+                <h4>Total</h4>
+                <h4 id="precioTotal">Carrito Vacio</h4>
+            </div>
+            <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+            <button class="boton">Confirmar Compra</button>
+        </div>
+    </div>
+
+    <!--! Secciones -->
+
     <div class="multi">
         <img class="hombre" src="Banner/Jpg/Banner hombre.png" alt="">
     </div>
 
-    <section class="variedad-pantalones">
+    <section class="variedad-pantalones" id="seccionVaria">
         <div class="contenedorPantalones">
             <div class="Pantalones">
                 <a href="caracteristicaPan.html"><img class="efecto" src="Pantalones/Jogger cargo/1.png" alt=""></a>
@@ -44,39 +69,46 @@
                 <p>Para hombre</p>
             </div>
             <div class="Pantalones">
-                <a href="JoggerNailon.html"><img class="efecto" src="Pantalones/Jogger cargo de nailon/1.png" alt=""></a>
+                <a href="JoggerNailon.html"><img class="efecto" src="Pantalones/Jogger cargo de nailon/1.png"
+                        alt=""></a>
                 <h1>Jogger Cargo de Nailón</h1>
                 <p>Para hombre</p>
             </div>
             <div class="Pantalones">
-                <a href="JoggerTerry.html"><img class="efecto" src="Pantalones/Jogger en terry Regular Fit/1.png" alt=""></a>
+                <a href="JoggerTerry.html"><img class="efecto" src="Pantalones/Jogger en terry Regular Fit/1.png"
+                        alt=""></a>
                 <h1>Jogger en Terry Regular Fit</h1>
                 <p>Para hombre</p>
             </div>
             <div class="Pantalones">
-                <a href="PantalonRelaxed.html"><img class="efecto" src="Pantalones/Pantalaón cargo Relaxed Fit/1.png" alt=""></a>
+                <a href="PantalonRelaxed.html"><img class="efecto" src="Pantalones/Pantalaón cargo Relaxed Fit/1.png"
+                        alt=""></a>
                 <h1>Pantalón Cargo Relaxed Fit</h1>
                 <p>Para hombre</p>
             </div>
         </div>
-        <div  class="contenedorPantalones">
+        <div class="contenedorPantalones">
             <div class="Pantalones">
-                <a href="Pantalon Ripstop.html"><img class="efecto" src="Pantalones/Pantalaón cargo Ripstop Regular Fit/1.png" alt=""></a>
+                <a href="Pantalon Ripstop.html"><img class="efecto"
+                        src="Pantalones/Pantalaón cargo Ripstop Regular Fit/1.png" alt=""></a>
                 <h1>Pantalón Cargo Ripstop Regular Fit </h1>
                 <p>Para hombre</p>
             </div>
             <div class="Pantalones">
-                <a href="PantalonBuzo.html"><img class="efecto" src="Pantalones/Pantalón buzo Regular Fit/1.png" alt=""></a>
+                <a href="PantalonBuzo.html"><img class="efecto" src="Pantalones/Pantalón buzo Regular Fit/1.png"
+                        alt=""></a>
                 <h1>Pantalón Buzo Regular Fit</h1>
                 <p>Para hombre</p>
             </div>
             <div class="Pantalones">
-                <a href="PantalonLino.html"><img class="efecto" src="Pantalones/Pantalón de terno en lino Slim Fit/1.png" alt=""></a>
+                <a href="PantalonLino.html"><img class="efecto"
+                        src="Pantalones/Pantalón de terno en lino Slim Fit/1.png" alt=""></a>
                 <h1>Pantalón de Terno en Lino Slim Fit</h1>
                 <p>Para hombre</p>
             </div>
             <div class="Pantalones">
-                <a href="PantalonMezcla.html"><img class="efecto" src="Pantalones/Pantalón en mezcla de lino Regular Fit/1.png" alt=""></a>
+                <a href="PantalonMezcla.html"><img class="efecto"
+                        src="Pantalones/Pantalón en mezcla de lino Regular Fit/1.png" alt=""></a>
                 <h1>Pantalón en Mezcla de Lino Regular</h1>
                 <p>Para hombre</p>
             </div>
@@ -116,8 +148,9 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
 
 <script src="JavaScript/src.js"></script>

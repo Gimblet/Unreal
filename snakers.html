@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div onclick="cerrarCarrito()" id="dim"></div>
     <header onmouseover="headerOnHover()" onmouseout="headerOnMouseOut()">
         <div class="headerContainer" id="headerContainerId">
             <nav>
@@ -25,7 +26,8 @@
             </div>
             <div>
                 <ul class="icon-main">
-                    <li><a href="#"><img class="icon" src="Iconos/carrito-de-compras.png" alt=""></a></li>
+                    <li><a href="#"><img class="icon" src="Iconos/carrito-de-compras.png" alt=""
+                                onclick="abrirCarrito()"></a></li>
                     <li><a href="#"><img class="icon" src="Iconos/usuario (1).png" alt=""></a></li>
                     <li><a href="#"><img class="icon" src="Iconos/busqueda.png" alt=""></a></li>
                     <li><a href="#"><img class="icon" src="Iconos/menu-hamburguesa.png" alt=""></a></li>
@@ -33,6 +35,28 @@
             </div>
         </div>
     </header>
+
+    <!-- ! Carrito de Compras -->
+
+    <div class="Menu-Prueba" id="General">
+        <div class="topMenu">
+            <h2>Mi Colección</h2>
+            <h3 onclick="cerrarCarrito()">X</h3>
+        </div>
+        <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+        </div>
+        <div class="bottomMenu">
+            <div class="contenedorTotalCarrito">
+                <h4>Total</h4>
+                <h4 id="precioTotal">Carrito Vacio</h4>
+            </div>
+            <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+            <button class="boton">Confirmar Compra</button>
+        </div>
+    </div>
+
+    <!--! Secciones -->
+
     <div class="multi">
         <img class="zapas" src="Banner/Jpg/Banner zapas.png" alt="">
     </div>
@@ -40,8 +64,8 @@
         <div class="contenedorSnakers">
             <div class="snakers">
                 <div class="efecto1">
-                    <a href="AdidasBadBunnyxForum.html"><img src="Zapatillas/Adidas Bad Bunny x Forum Buckle Low The Last Forum/1.png"
-                            alt=""></a>
+                    <a href="AdidasBadBunnyxForum.html"><img
+                            src="Zapatillas/Adidas Bad Bunny x Forum Buckle Low The Last Forum/1.png" alt=""></a>
                 </div>
                 <h1>Adidas Bad Bunny Forum</h1>
                 <p>Zapatillas para hombre</p>
