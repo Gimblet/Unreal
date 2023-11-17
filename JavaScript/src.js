@@ -110,3 +110,99 @@ for (var n = 0; n < document.getElementsByClassName("efecto").length; n++) {
   document.getElementsByClassName("efecto")[n].setAttribute("onmouseout", "normalImagen(this)");
 
 }
+
+//todo Ordenar
+
+//! Carrito de Compras
+
+//! Se encarga de Abrir , Cerrar o Limpiar el carrito de Compras
+
+function abrirCarrito() {
+  document.getElementById("General").style.display = "block";
+  document.getElementById("dim").style.display = "block";
+}
+
+function cerrarCarrito() {
+  document.getElementById("dim").style.display = "none";
+  document.getElementById("General").style.display = "none";
+}
+
+function limpiarCarrito() {
+  sessionStorage.clear();
+  alert("Todos Los Elementos en el carrito fueron Limpiados Correctamente")
+  window.location.reload();
+}
+
+//? -------------------------------------------- Session Storage Get (Parte 2) --------------------------------------
+
+//! Se encarga de Obtener los valores previamente Almacenados
+
+function ObtenerCantidad() {
+  cantidadElementos = Number(sessionStorage.getItem("cantidadElementos"));
+}
+
+function ObtenerPrecioAcumulado() {
+  return precioAcumulado = Number(sessionStorage.getItem("PrecioAcumulado"));
+}
+
+//! Obtiene los valores almacenados y los restaura uno a uno (184 -> 236)
+
+function ObtenerProductos() {
+  for (var i = 1; i <= cantidadElementos; i++) {
+    var elementoCarrito = JSON.parse(sessionStorage.getItem("ProductoAlmacenado" + i));
+    agregarElementosExistentes(elementoCarrito, i);
+  }
+}
+
+function agregarElementosExistentes(elementoCarrito, numeroElemento) {
+  function agregarContenedor() {
+    //Crea el contenedor del Elemento
+    var CContenedor = document.createElement("div");
+    CContenedor.className = "ElementoCarrito" + numeroElemento + " ElementoCarrito";
+    document.querySelector(".contentMenu").appendChild(CContenedor);
+  }
+  agregarContenedor();
+
+  //Obtiene la imagen y la Agrega
+  function agregarImagen() {
+    var CImagen = document.createElement("img");
+    CImagen.className = 'Elemento-Img'
+    CImagen.src = elementoCarrito[0];
+    document.querySelector(".ElementoCarrito" + numeroElemento).appendChild(CImagen);
+  }
+  agregarImagen();
+
+  function agregarContenedorInterno() {
+    //Crea el contenedor del Titulo y Precio
+    var CContenedor = document.createElement("div");
+    CContenedor.className = "ElementoTexto" + numeroElemento + " ElementoTexto";
+    document.querySelector(".ElementoCarrito" + numeroElemento).appendChild(CContenedor);
+  }
+  agregarContenedorInterno();
+
+  //Obtiene el Titulo y lo Agrega
+  function agregarTitulo() {
+    var CTitulo = document.createElement("h4");
+    CTitulo.className = 'Elemento-Titulo';
+    CTitulo.innerHTML = elementoCarrito[1];
+    document.querySelector(".ElementoTexto" + numeroElemento).appendChild(CTitulo);
+  }
+  agregarTitulo();
+
+  //Obtiene el Precio y lo Agrega
+  function agregarPrecio() {
+    var CPrecio = document.createElement("h4");
+    CPrecio.className = 'Elemento-Precio';
+    CPrecio.innerHTML = 'S/' + elementoCarrito[2];
+    document.querySelector(".ElementoTexto" + numeroElemento).appendChild(CPrecio);
+  }
+  agregarPrecio();
+
+  document.getElementById("precioTotal").innerHTML = "S/ " + ObtenerPrecioAcumulado();
+}
+
+//? --------------------------------------------------------------------------------------------------------
+
+//! Llama funciones que necesitan ejecutarse antes que todo
+
+document.body.setAttribute("onload", "ObtenerCantidad(), ObtenerProductos()", "ObtenerPrecioAcumulado()");
