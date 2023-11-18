@@ -192,7 +192,7 @@ function ObtenerCantidad() {
 }
 
 function ObtenerPrecioAcumulado() {
-  return precioAcumulado = Number(sessionStorage.getItem("PrecioAcumulado"));
+  return precioAcumulado = Number(Number(sessionStorage.getItem("PrecioAcumulado")).toFixed(2));
 }
 
 //! Obtiene los valores almacenados y los restaura uno a uno (184 -> 236)
