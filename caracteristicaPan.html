@@ -4,44 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
-    <link rel="stylesheet" href="">
     <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
-    <title>Document</title>
+    <title>Jogger Cargo</title>
 </head>
 <body>
-    <header onmouseover="headerOnHover()" onmouseout="headerOnMouseOut()">
-        <div class="headerContainer" id="headerContainerId">
-            <nav>
-                <ul class="navnom">
-                    <li><a class="color" href="../Pages/catalogos.html">Catalogo</a></li>
-                    <li><a class="color" href="../Pages/contacto.html">Contacto</a></li>
-                    <li><a class="color" href="../Pages/Servicios.html">Servicios</a></li>
-                </ul>
-            </nav>
-            <div class="logo">
-                <a href="index.html" class="logo"><img id="unrealLogo" src="Logos/Logo negro.png" alt=""
-                        width="200px"></a>
-            </div>
-            <div>
-                <ul class="icon-main">
-                    <li><a href="#"><img class="icon" src="Iconos/Negro/Nbusqueda.png" alt=""></a></li>
-                    <li><a href="#"><img class="icon" src="Iconos/Negro/Ncarrito-de-compras.png" alt=""></a></li>
-                    <li><a href="#"><img class="icon" src="Iconos/Negro/Nmenu-hamburguesa.png" alt=""></a></li>
-                    <li><a href="#"><img class="icon" src="Iconos/Negro/Nusuario.png" alt=""></a></li>
-                </ul>
-            </div>
+  <div onclick="cerrarCarrito()" id="dim"></div>
+  <header>
+    <div class="headerContainer" id="headerContainerId">
+      <nav>
+        <ul class="navnom">
+          <li><a class="color" href="../Pages/catalogos.html">Catalogo</a></li>
+          <li><a class="color" href="../Pages/contacto.html">Contacto</a></li>
+          <li><a class="color" href="../Pages/Servicios.html">Servicios</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <a href="index.html" class="logo"><img id="unrealLogo" src="Logos/Logo negro.png" alt="" width="200px"></a>
+      </div>
+      <div>
+        <ul class="icon-main">
+          <li><a href="#"><img class="icon" onclick="abrirCarrito()" src="Iconos/Negro/Ncarrito-de-compras.png"
+                alt=""></a></li>
+          <li><a href="#"><img class="icon" src="Iconos/Negro/Nusuario.png" alt=""></a></li>
+          <li><a href="#"><img class="icon" src="Iconos/Negro/Nbusqueda.png" alt=""></a></li>
+          <li><a href="#"><img class="icon" src="Iconos/Negro/Nmenu-hamburguesa.png" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+    <div class="Menu-Prueba" id="General">
+      <div class="topMenu">
+        <h2>Mi Colección</h2>
+        <h3 onclick="cerrarCarrito()">X</h3>
+      </div>
+      <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+      </div>
+      <div class="bottomMenu">
+        <div class="contenedorTotalCarrito">
+          <h4>Total</h4>
+          <h4 id="precioTotal">Carrito Vacio</h4>
         </div>
-    </header>
+        <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+        <button class="boton">Confirmar Compra</button>
+      </div>
+    </div>
 
     <main>
         <section>
-            <img class="cargo" src="Pantalones/Jogger cargo/Joggers-cargo---Verde-caqui---H-M-PE.jpg" alt="">
-            <img class="cargo" src="Pantalones/Jogger cargo/Joggers-cargo---Verde-caqui---H-M-PE (1).jpg" alt="">
+            <img class="Producto-Titulo" src="Pantalones/Jogger cargo/Joggers-cargo---Verde-caqui---H-M-PE.jpg" alt="">
+            <img class="Producto-Titulo" id="Prod-Main" src="Pantalones/Jogger cargo/Joggers-cargo---Verde-caqui---H-M-PE (1).jpg" alt="">
         </section>
 
         <aside>
-            <h1 class="pantalon-titulo" >Jogger Cargo</h1>
-            <h3 class="pantalon-precio" >S/ 109.00</h3>
+            <h1 class="Producto-Titulo"  id="Producto-Titulo">Jogger Cargo</h1>
+            <div class="contenedorPrecio">
+              <h3 class="Simbolo-Precio">S/</h3>
+              <h3 class="Producto-Precio" id="Producto-Precio">109.90</h3>
+            </div>
             <h4>Colores</h4>
             <div class="Contenedor-pequeño">
                 <img class="pant-pequeño" src="Pantalones/Jogger cargo/Joggers-cargo---Verde-caqui---H-M-PE (1).jpg" alt="">
@@ -55,8 +75,7 @@
                 <button class="Producto-Tallas">XL</button>
                 <button class="Producto-Tallas">XXL</button>
               </div>
-              <h4>Guia de Tallas</h4>
-              <button>
+              <button id="Btn-Agregar">
                 <img src="Iconos/carrito-de-compras.png" alt="">
                 <p>Agregar</p>
               </button>
@@ -101,3 +120,5 @@
 
 </body>
 </html>
+
+<script src="JavaScript/productos.js"></script>

@@ -56,6 +56,127 @@
     margin: 0 10px;
 }
 
+
+/***********************Carrito de Compras**************/
+
+.Menu-Prueba {
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  right: 0%;
+  width: 30%;
+  top: 0%;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+#General {
+  display: none;
+}
+
+.topMenu {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: white;
+}
+
+.topMenu h2,
+.topMenu h3 {
+  font-size: 14pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 550;
+}
+
+.topMenu h3 {
+  cursor: pointer;
+}
+
+.contentMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.ElementoCarrito {
+  margin: 4% 2% 0% 4%;
+  width: 80%;
+  align-self: center;
+  display: flex;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.Elemento-Img {
+  width: 28%;
+}
+
+.ElementoTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.Elemento-Titulo {
+  font-family: "QuickSand-Regular";
+  font-size: 16pt;
+}
+
+.Elemento-Precio {
+  font-family: "QuickSand-Regular";
+  font-size: 14pt;
+}
+
+.bottomMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorTotalCarrito {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedorTotalCarrito h4 {
+  font-size: 14.5pt;
+  font-family: "QuickSand-Regular";
+  margin: 25px;
+  margin-bottom: 0px;
+}
+
+#limpiarCarro {
+  text-decoration: underline;
+  font-family: "QuickSand-Light";
+  font-size: 12pt;
+  cursor: pointer;
+  margin-left: 13%;
+  margin-top: 3%;
+  width: fit-content;
+}
+
+.boton {
+  align-self: center;
+  width: 75%;
+  background-color: Black;
+  color: white;
+  height: 60px;
+  font-family: "QuickSand-Light";
+  font-size: 13pt;
+  margin-bottom: 2.5%;
+}
+
+#dim {
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
+}
+
 /************************Productooooooo**************************/
 
 main{
@@ -64,50 +185,41 @@ main{
     justify-content: space-evenly;
   }
   
-  section{
+section{
     width: 100%;
-    display: flex;
-  }
+}
 
-.cargo{
+section
+.Producto-Titulo{
     width: 40%;
     padding: 15px;
 }
 
-.variedad-pantalones {
-    height: 1080px;
-    max-height: 1440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: white;
-    margin-top: 900px;
+aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.contenedorPantalones {
-    display: flex;
-    justify-content: space-around;
-}
-
-.contenedorPantalones button {
-    align-self: center;
-    background-color: transparent;
-    border: none;
-    font-size: 20pt;
-}
-
-.pantalon-titulo{
+.Producto-Titulo{
     font-size: 23pt;
     font-family: "QuickSand-Light";
     font-weight: 600;
   }
   
-.pantalon-precio{
+.contenedorPrecio {
+    display: flex;
+    gap: 5px;
+}
+  
+.Simbolo-Precio,
+.Producto-Precio {
     font-size: 18pt;
     font-family: "QuickSand-Regular";
     font-weight: 600;
     margin-top: 12px;
-  }
+}
 
 .Contenedor-pequeño{
     margin-top: 3%;
@@ -126,9 +238,9 @@ main{
     display: flex;
     gap: 5%;
     margin-top: 20px;
-  }
+}
   
-  .Producto-Tallas{
+.Producto-Tallas{
     margin-top: 0;
     width: 16%;
     height: 45px;
@@ -137,34 +249,38 @@ main{
     font-weight: 500;
     font-size: 14pt;
     background-color: transparent;
-  }
+}
 
-  h4{
+h4{
     font-family: "QuickSand-Regular";
     font-weight: 600;
     margin-top: 12px;
-  }
+}
   
-  button{
-    margin-top: 20px;
+button{
+    margin-top: 35px;
     background-color: black;
-    width: 100%;
+    width: 80%;
     height: 60px;
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  button img{
+button img{
     width: 30px;
-  }
+}
   
-  button p{
+button p{
     font-family: "QuickSand-Light";
     font-size: 15pt;
     color: white;
-  }
+}
+
+button:hover {
+    cursor: pointer;
+}
 
 /************************FOOTER***********************/
 

@@ -290,6 +290,10 @@ button p {
   color: white;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 /*! ///////////// Footer /////////////// */
 
 .contenedorFooterContenidos,
