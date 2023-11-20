@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Estilos/snakersIndividual.css">
   <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
-  <title>Bolso Alma BB</title>
+  <title>Adidas Bad Bunny x Forum</title>
 </head>
 
 <body>
-  <header onmouseover="headerOnHover()" onmouseout="headerOnMouseOut()">
+  <div onclick="cerrarCarrito()" id="dim"></div>
+  <header>
     <div class="headerContainer" id="headerContainerId">
       <nav>
         <ul class="navnom">
@@ -24,7 +25,8 @@
       </div>
       <div>
         <ul class="icon-main">
-          <li><a href="#"><img class="icon" src="Iconos/Negro/Ncarrito-de-compras.png" alt=""></a></li>
+          <li><a href="#"><img class="icon" src="Iconos/Negro/Ncarrito-de-compras.png" onclick="abrirCarrito()"
+                alt=""></a></li>
           <li><a href="#"><img class="icon" src="Iconos/Negro/Nusuario.png" alt=""></a></li>
           <li><a href="#"><img class="icon" src="Iconos/Negro/Nbusqueda.png" alt=""></a></li>
           <li><a href="#"><img class="icon" src="Iconos/Negro/Nmenu-hamburguesa.png" alt=""></a></li>
@@ -32,6 +34,27 @@
       </div>
     </div>
   </header>
+
+  <!-- ! Carrito de Compras -->
+
+  <div class="Menu-Prueba" id="General">
+    <div class="topMenu">
+      <h2>Mi Colección</h2>
+      <h3 onclick="cerrarCarrito()">X</h3>
+    </div>
+    <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+    </div>
+    <div class="bottomMenu">
+      <div class="contenedorTotalCarrito">
+        <h4>Total</h4>
+        <h4 id="precioTotal">Carrito Vacio</h4>
+      </div>
+      <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+      <button class="boton">Confirmar Compra</button>
+    </div>
+  </div>
+
+  <!--! Producto -->
 
   <main>
     <section>
@@ -55,7 +78,7 @@
         <button class="Producto-Tallas">11 US</button>
       </div>
       <h4>Guia de Tallas</h4>
-      <button>
+      <button id="Btn-Agregar">
         <img src="Iconos/carrito-de-compras.png" alt="">
         <p>Agregar</p>
       </button>
@@ -99,4 +122,4 @@
 
 </html>
 
-<script src="JavaScript/carteras.js"></script>
+<script src="JavaScript/productos.js"></script>
