@@ -1,4 +1,31 @@
 //! ------------------------------ Cambiar Imagen Segun Click -------------------------------
+//! Se encarga de llamar la funcion creada Arriba dependiendo en donde se de click
+
+//todo Optimizar Codigo
+
+// document.addEventListener('click', function (e) {
+//   document.getElementById(e.target.id).onclick = function () {
+//     cambiarImagenPrincipal(e.target.id);
+//   }
+// }, false);
+
+document.getElementById("Aux1").onclick = function () {
+  cambiarImagenPrincipal("Aux1");
+}
+
+document.getElementById("Aux2").onclick = function () {
+  cambiarImagenPrincipal("Aux2");
+}
+
+document.getElementById("Aux3").onclick = function () {
+  cambiarImagenPrincipal("Aux3");
+}
+
+if (document.getElementById('Aux4') != null) {
+  document.getElementById("Aux4").onclick = function () {
+    cambiarImagenPrincipal("Aux4");
+  }
+}
 
 function cambiarImagenPrincipal(auxn) {
   var rutaInicial = document.getElementById(auxn).src;
@@ -19,6 +46,25 @@ function cambiarImagenPrincipal(auxn) {
   }
 
   function obtenerTemp(temp) {
+    let zapatillas = document.getElementById("Zapatillas");
+
+    if (zapatillas != null) {
+      return tempZapatillas(temp);
+    }
+    else {
+      return tempCarteras(temp);
+    }
+  }
+
+  function tempZapatillas(temp) {
+    if (auxn == "Aux1") { return temp = "1"; }
+    else if (auxn == "Aux2") { return temp = "2"; }
+    else if (auxn == "Aux3") { return temp = "3"; }
+    else if (auxn == "Aux4") { return temp = "4"; }
+    else { return temp = "1"; }
+  }
+
+  function tempCarteras(temp) {
     if (auxn == "Aux1") { return temp = "1"; }
     else if (auxn == "Aux2") { return temp = "2"; }
     else if (auxn == "Aux3") { return temp = "3"; }
@@ -29,27 +75,15 @@ function cambiarImagenPrincipal(auxn) {
     for (i = 0; i < ArrayAux.length; i++) {
       c++;
       var temp = ArrayAux[i];
-      if (posicionNumeroImg() == c) { obtenerTemp(temp); }
+      if (posicionNumeroImg() == c) {
+        obtenerTemp(temp);
+      }
       rutaFinal = rutaFinal + temp;
     }
   }
   obtenerRutaFinal();
 
   document.getElementById("Prod-Main").setAttribute("src", rutaFinal);
-}
-
-//! Se encarga de llamar la funcion creada Arriba dependiendo en donde se de click
-
-document.getElementById("Aux1").onclick = function () {
-  cambiarImagenPrincipal("Aux1");
-}
-
-document.getElementById("Aux2").onclick = function () {
-  cambiarImagenPrincipal("Aux2");
-}
-
-document.getElementById("Aux3").onclick = function () {
-  cambiarImagenPrincipal("Aux3");
 }
 
 //! -------------------------------- Agregar Producto Al carrito ----------------------------------

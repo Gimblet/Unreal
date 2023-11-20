@@ -67,192 +67,198 @@ header {
 /*! Carrito De Compras */
 
 .Menu-Prueba {
-    position: fixed;
-    z-index: 2;
-    height: 100%;
-    right: 0%;
-    width: 30%;
-    top: 0%;
-    background-color: white;
-    overflow-y: scroll;
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  right: 0%;
+  width: 30%;
+  top: 0%;
+  background-color: white;
+  overflow-y: scroll;
 }
 
 #General {
-    display: none;
+  display: none;
 }
 
 .topMenu {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: white;
 }
 
 .topMenu h2,
 .topMenu h3 {
-    font-size: 14pt;
-    font-family: "QuickSand-Regular";
-    font-weight: 550;
+  font-size: 14pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 550;
 }
 
 .topMenu h3 {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .contentMenu {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .ElementoCarrito {
-    margin: 4% 2% 0% 4%;
-    width: 80%;
-    align-self: center;
-    display: flex;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-    background-color: white;
+  margin: 4% 2% 0% 4%;
+  width: 80%;
+  align-self: center;
+  display: flex;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .Elemento-Img {
-    width: 28%;
+  width: 28%;
 }
 
 .ElementoTexto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .Elemento-Titulo {
-    font-family: "QuickSand-Regular";
-    font-size: 16pt;
+  font-family: "QuickSand-Regular";
+  font-size: 16pt;
 }
 
 .Elemento-Precio {
-    font-family: "QuickSand-Regular";
-    font-size: 14pt;
+  font-family: "QuickSand-Regular";
+  font-size: 14pt;
 }
 
 .bottomMenu {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contenedorTotalCarrito {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .contenedorTotalCarrito h4 {
-    font-size: 14.5pt;
-    font-family: "QuickSand-Regular";
-    margin: 25px;
-    margin-bottom: 0px;
+  font-size: 14.5pt;
+  font-family: "QuickSand-Regular";
+  margin: 25px;
+  margin-bottom: 0px;
 }
 
 #limpiarCarro {
-    text-decoration: underline;
-    font-family: "QuickSand-Light";
-    font-size: 12pt;
-    cursor: pointer;
-    margin-left: 13%;
-    margin-top: 3%;
-    width: fit-content;
+  text-decoration: underline;
+  font-family: "QuickSand-Light";
+  font-size: 12pt;
+  cursor: pointer;
+  margin-left: 13%;
+  margin-top: 3%;
+  width: fit-content;
 }
 
 .boton {
-    margin-top: 35px;
-    align-self: center;
-    width: 75%;
-    height: 60px;
-    background-color: Black;
-    color: white;
-    font-family: "QuickSand-Light";
-    font-size: 13pt;
-    margin-bottom: 2.5%;
+  margin-top: 35px;
+  align-self: center;
+  width: 75%;
+  height: 60px;
+  background-color: Black;
+  color: white;
+  font-family: "QuickSand-Light";
+  font-size: 13pt;
+  margin-bottom: 2.5%;
 }
 
 #dim {
-    background-color: black;
-    opacity: 0.5;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    display: none;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
 }
 
 /*! ///////////// Producto ///////////////// */
 
-main{
+main {
   display: flex;
   margin: 150px 180px 150px 180px;
   justify-content: space-evenly;
 }
 
-section{
+section {
   width: 30%;
 }
 
-.Producto-Principal{
+.Producto-Principal {
   width: 100%;
 }
 
-.Contenedor-Aux{
+.Contenedor-Aux {
   margin-top: 3%;
-  display:flex;
+  display: flex;
   width: 100%;
   gap: 2%;
   justify-content: space-between;
 }
 
-.Producto-Aux{
+.Producto-Aux {
   width: 20%;
   max-width: 200px;
 }
 
-aside{
+aside {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-aside h4{
+aside h4 {
   margin-top: 30px;
   font-family: "QuickSand-Light";
 }
 
-.Producto-Titulo{
+.Producto-Titulo {
   font-size: 23pt;
   font-family: "QuickSand-Light";
   font-weight: 600;
 }
 
-.Producto-Precio{
+.contenedorPrecio {
+  display: flex;
+  gap: 5px;
+}
+
+.Producto-Precio,
+.Simbolo-Precio {
   font-size: 18pt;
   font-family: "QuickSand-Regular";
   font-weight: 600;
   margin-top: 12px;
 }
 
-.Producto-Info{
+.Producto-Info {
   margin-top: 30px;
   font-size: 12pt;
   font-family: "QuickSand-Light";
   font-weight: bold;
 }
 
-.Contenedor-Tallas{
+.Contenedor-Tallas {
   display: flex;
   gap: 5%;
   margin-top: 20px;
 }
 
-.Producto-Tallas{
+.Producto-Tallas {
   margin-top: 0;
   width: 16%;
   height: 45px;
@@ -263,7 +269,7 @@ aside h4{
   background-color: transparent;
 }
 
-button{
+button {
   margin-top: 20px;
   background-color: black;
   width: 100%;
@@ -274,11 +280,11 @@ button{
   align-items: center;
 }
 
-button img{
+button img {
   width: 30px;
 }
 
-button p{
+button p {
   font-family: "QuickSand-Light";
   font-size: 15pt;
   color: white;
