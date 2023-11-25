@@ -17,8 +17,10 @@ document.getElementById("Aux2").onclick = function () {
   cambiarImagenPrincipal("Aux2");
 }
 
-document.getElementById("Aux3").onclick = function () {
-  cambiarImagenPrincipal("Aux3");
+if (document.getElementById("Aux3") != null) {
+  document.getElementById("Aux3").onclick = function () {
+    cambiarImagenPrincipal("Aux3");
+  }
 }
 
 if (document.getElementById('Aux4') != null) {
