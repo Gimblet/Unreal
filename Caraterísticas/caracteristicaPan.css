@@ -1,59 +1,59 @@
 @font-face {
-    font-family: "QuickSand-Light";
-    src: url("../Fuentes/QuickSand/static/Quicksand-Light.ttf");
+  font-family: "QuickSand-Light";
+  src: url("../Fuentes/QuickSand/static/Quicksand-Light.ttf");
 }
 
 @font-face {
-    font-family: "QuickSand-Regular";
-    src: url("../Fuentes/QuickSand/Quicksand-VariableFont_wght.ttf");
+  font-family: "QuickSand-Regular";
+  src: url("../Fuentes/QuickSand/Quicksand-VariableFont_wght.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
 }
 
 .headerContainer {
-    max-width: 1110px;
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  max-width: 1110px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 .navnom {
-    display: flex;
+  display: flex;
 }
 
 .color {
-    color: black;
-    margin: 0 10px;
-    font-family: "QuickSand-Regular";
-    font-weight: 400;
-    letter-spacing: 0.1ch;
+  color: black;
+  margin: 0 10px;
+  font-family: "QuickSand-Regular";
+  font-weight: 400;
+  letter-spacing: 0.1ch;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    margin-right: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .icon-main {
-    display: flex;
-    padding-left: 20%;
+  display: flex;
+  padding-left: 20%;
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
 }
 
 
@@ -179,20 +179,31 @@
 
 /************************Productooooooo**************************/
 
-main{
-    display: flex;
-    margin: 150px 180px 150px 180px;
-    justify-content: space-evenly;
-  }
-  
-section{
-    width: 100%;
+main {
+  display: flex;
+  margin: 150px 180px 150px 180px;
+  justify-content: space-around;
+  gap: 25px;
 }
 
-section
-.Producto-Titulo{
-    width: 40%;
-    padding: 15px;
+section {
+  width: 70%;
+  display: flex;
+  gap: 25px;
+  min-height: 700px;
+  max-height: 800px;
+  justify-content: center;
+}
+
+section img {
+  aspect-ratio: 2/3;
+  max-width: 450px;
+  max-height: 850px;
+}
+
+section .Producto-Titulo {
+  width: 40%;
+  padding: 15px;
 }
 
 aside {
@@ -202,84 +213,85 @@ aside {
   justify-content: center;
 }
 
-.Producto-Titulo{
-    font-size: 23pt;
-    font-family: "QuickSand-Light";
-    font-weight: 600;
-  }
-  
-.contenedorPrecio {
-    display: flex;
-    gap: 5px;
+.Producto-Titulo {
+  font-size: 23pt;
+  font-family: "QuickSand-Light";
+  font-weight: 600;
 }
-  
+
+.contenedorPrecio {
+  display: flex;
+  gap: 5px;
+}
+
 .Simbolo-Precio,
 .Producto-Precio {
-    font-size: 18pt;
-    font-family: "QuickSand-Regular";
-    font-weight: 600;
-    margin-top: 12px;
+  font-size: 18pt;
+  font-family: "QuickSand-Regular";
+  font-weight: 600;
+  margin-top: 12px;
 }
 
-.Contenedor-pequeño{
-    margin-top: 3%;
-    width: 100%;
-    gap: 2%;
-    justify-content: space-between;
-  }
-
-  .pant-pequeño{
-    width: 20%;
-    max-width: 200px;
-    border: 1px solid black;
-  }
-
-.Contenedor-Tallas{
-    display: flex;
-    gap: 5%;
-    margin-top: 20px;
-}
-  
-.Producto-Tallas{
-    margin-top: 0;
-    width: 16%;
-    height: 45px;
-    max-height: 80px;
-    font-family: "QuickSand-Regular";
-    font-weight: 500;
-    font-size: 14pt;
-    background-color: transparent;
+.Contenedor-pequeño {
+  margin-top: 3%;
+  width: 100%;
+  gap: 2%;
+  justify-content: space-between;
 }
 
-h4{
-    font-family: "QuickSand-Regular";
-    font-weight: 600;
-    margin-top: 12px;
+.pant-pequeño {
+  width: 20%;
+  max-width: 200px;
+  border: 1px solid black;
 }
-  
-button{
-    margin-top: 35px;
-    background-color: black;
-    width: 80%;
-    height: 60px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
+
+.Contenedor-Tallas {
+  display: flex;
+  gap: 5%;
+  margin-top: 20px;
+  width: 80%;
 }
-  
-button img{
-    width: 30px;
+
+.Producto-Tallas {
+  margin-top: 0;
+  width: 16%;
+  height: 45px;
+  max-height: 80px;
+  font-family: "QuickSand-Regular";
+  font-weight: 500;
+  font-size: 14pt;
+  background-color: transparent;
 }
-  
-button p{
-    font-family: "QuickSand-Light";
-    font-size: 15pt;
-    color: white;
+
+h4 {
+  font-family: "QuickSand-Regular";
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+button {
+  margin-top: 35px;
+  background-color: black;
+  width: 80%;
+  height: 60px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+button img {
+  width: 30px;
+}
+
+button p {
+  font-family: "QuickSand-Light";
+  font-size: 15pt;
+  color: white;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /************************FOOTER***********************/
