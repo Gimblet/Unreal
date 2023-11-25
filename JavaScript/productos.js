@@ -17,8 +17,10 @@ document.getElementById("Aux2").onclick = function () {
   cambiarImagenPrincipal("Aux2");
 }
 
-document.getElementById("Aux3").onclick = function () {
-  cambiarImagenPrincipal("Aux3");
+if (document.getElementById("Aux3") != null) {
+  document.getElementById("Aux3").onclick = function () {
+    cambiarImagenPrincipal("Aux3");
+  }
 }
 
 if (document.getElementById('Aux4') != null) {
@@ -47,13 +49,23 @@ function cambiarImagenPrincipal(auxn) {
 
   function obtenerTemp(temp) {
     let zapatillas = document.getElementById("Zapatillas");
+    let pantalones = document.getElementById("Pantalones");
 
-    if (zapatillas != null) {
+    if (pantalones != null) {
+      return tempPantalones(temp);
+    }
+    else if (zapatillas != null) {
       return tempZapatillas(temp);
     }
     else {
       return tempCarteras(temp);
     }
+  }
+
+  function tempPantalones(temp) {
+    if (auxn == "Aux1") { return temp = "1"; }
+    else if (auxn == "Aux2") { return temp = "2"; }
+    else { return temp = "1"; }
   }
 
   function tempZapatillas(temp) {
