@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
-    <link rel="stylesheet" href="">
-    <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
+  <link rel="stylesheet" href="">
+  <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
+  <title>Pantalon Buzo</title>
 </head>
+
 <body>
   <div onclick="cerrarCarrito()" id="dim"></div>
   <header>
@@ -32,55 +34,57 @@
         </ul>
       </div>
     </div>
-    </header>
+  </header>
 
-    <div class="Menu-Prueba" id="General">
-      <div class="topMenu">
-        <h2>Mi Colección</h2>
-        <h3 onclick="cerrarCarrito()">X</h3>
-      </div>
-      <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
-      </div>
-      <div class="bottomMenu">
-        <div class="contenedorTotalCarrito">
-          <h4>Total</h4>
-          <h4 id="precioTotal">Carrito Vacio</h4>
-        </div>
-        <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
-        <button class="boton">Confirmar Compra</button>
-      </div>
+  <div class="Menu-Prueba" id="General">
+    <div class="topMenu">
+      <h2>Mi Colección</h2>
+      <h3 onclick="cerrarCarrito()">X</h3>
     </div>
+    <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+    </div>
+    <div class="bottomMenu">
+      <div class="contenedorTotalCarrito">
+        <h4>Total</h4>
+        <h4 id="precioTotal">Carrito Vacio</h4>
+      </div>
+      <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+      <button class="boton">Confirmar Compra</button>
+    </div>
+  </div>
 
-    <main>
-        <section>
-            <img class="cargo" src="Pantalones/Pantalón buzo Regular Fit/Pantalon-de-buzo-Regular-Fit---Verde---H-M-PE (1).jpg" alt="">
-            <img class="cargo" src="Pantalones/Pantalón buzo Regular Fit/Pantalon-de-buzo-Regular-Fit---Verde---H-M-PE.jpg" alt="">
-        </section>
+  <main id="Pantalones">
+    <section>
+      <img class="cargo" id="Prod-Main" src="Pantalones/Pantalón buzo Regular Fit/hd/1.jpg" alt="">
+      <img class="cargo" src="Pantalones/Pantalón buzo Regular Fit/hd/3.jpg" alt="">
+    </section>
 
-        <aside>
-            <h1 class="pantalon-titulo" >Pantalón Buzo Regular Fit</h1>
-            <h3 class="pantalon-precio" >S/ 109.00</h3>
-            <h4>Colores</h4>
-            <div class="Contenedor-pequeño">
-                <img class="pant-pequeño" src="Pantalones/Pantalón buzo Regular Fit/Pantalon-de-buzo-Regular-Fit---Verde---H-M-PE.jpg" alt="">
-                <img class="pant-pequeño" src="Pantalones/Pantalón buzo Regular Fit/Pantalon-de-buzo-Regular-Fit---Azul---H-M-PE.jpg" alt="">
-            </div>
-            <h4>Tallas</h4>
-            <div class="Contenedor-Tallas">
-                <button class="Producto-Tallas">S</button>
-                <button class="Producto-Tallas">M</button>
-                <button class="Producto-Tallas">L</button>
-                <button class="Producto-Tallas">XL</button>
-                <button class="Producto-Tallas">XXL</button>
-              </div>
-              <h4>Guia de Tallas</h4>
-              <button>
-                <img src="Iconos/carrito-de-compras.png" alt="">
-                <p>Agregar</p>
-              </button>
-        </aside>
-    </main>
-
+    <aside>
+      <h1 class="pantalon-titulo Producto-Titulo" id="Producto-Titulo">Pantalón Buzo Regular Fit</h1>
+      <div class="contenedorPrecio">
+        <h3 class="Simbolo-Precio">S/</h3>
+        <h3 class="pantalon-precio Producto-Precio" id="Producto-Precio">80.00</h3>
+      </div>
+      <h4>Colores</h4>
+      <div class="Contenedor-pequeño">
+        <img id="Aux1" class="pant-pequeño" src="Pantalones/Pantalón buzo Regular Fit/hd/1.jpg" alt="">
+        <img id="Aux2" class="pant-pequeño" src="Pantalones/Pantalón buzo Regular Fit/hd/2.jpg" alt="">
+      </div>
+      <h4>Tallas</h4>
+      <div class="Contenedor-Tallas">
+        <button class="Producto-Tallas">S</button>
+        <button class="Producto-Tallas">M</button>
+        <button class="Producto-Tallas">L</button>
+        <button class="Producto-Tallas">XL</button>
+        <button class="Producto-Tallas">XXL</button>
+      </div>
+      <h4>Guia de Tallas</h4>
+      <button id="Btn-Agregar">
+        <img src="Iconos/carrito-de-compras.png" alt="">
+        <p>Agregar</p>
+      </button>
+    </aside>
+  </main>
 
   <footer>
     <div class="contenedorFooterContenidos">
@@ -117,7 +121,6 @@
   </footer>
 </body>
 
-</body>
-</html>
-
 <script src="JavaScript/productos.js"></script>
+
+</html>
