@@ -1,14 +1,6 @@
 //! ------------------------------ Cambiar Imagen Segun Click -------------------------------
 //! Se encarga de llamar la funcion creada Arriba dependiendo en donde se de click
 
-//todo Optimizar Codigo
-
-// document.addEventListener('click', function (e) {
-//   document.getElementById(e.target.id).onclick = function () {
-//     cambiarImagenPrincipal(e.target.id);
-//   }
-// }, false);
-
 document.getElementById("Aux1").onclick = function () {
   cambiarImagenPrincipal("Aux1");
 }

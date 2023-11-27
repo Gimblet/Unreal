@@ -232,6 +232,10 @@ aside {
   margin-top: 12px;
 }
 
+.cargo{
+  object-fit: cover;
+}
+
 .Contenedor-pequeño {
   margin-top: 3%;
   width: 100%;

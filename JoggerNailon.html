@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
-    <link rel="stylesheet" href="">
-    <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
+  <link rel="stylesheet" href="">
+  <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
+  <title>Jogger Cargo de Nailon</title>
 </head>
+
 <body>
   <div onclick="cerrarCarrito()" id="dim"></div>
   <header>
@@ -32,54 +34,59 @@
         </ul>
       </div>
     </div>
-    </header>
+  </header>
 
-    <div class="Menu-Prueba" id="General">
-      <div class="topMenu">
-        <h2>Mi Colección</h2>
-        <h3 onclick="cerrarCarrito()">X</h3>
-      </div>
-      <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
-      </div>
-      <div class="bottomMenu">
-        <div class="contenedorTotalCarrito">
-          <h4>Total</h4>
-          <h4 id="precioTotal">Carrito Vacio</h4>
-        </div>
-        <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
-        <button class="boton">Confirmar Compra</button>
-      </div>
+  <div class="Menu-Prueba" id="General">
+    <div class="topMenu">
+      <h2>Mi Colección</h2>
+      <h3 onclick="cerrarCarrito()">X</h3>
     </div>
+    <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+    </div>
+    <div class="bottomMenu">
+      <div class="contenedorTotalCarrito">
+        <h4>Total</h4>
+        <h4 id="precioTotal">Carrito Vacio</h4>
+      </div>
+      <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+      <button class="boton">Confirmar Compra</button>
+    </div>
+  </div>
 
-    <main>
-        <section>
-            <img class="cargo" src="Pantalones/Jogger cargo de nailon/Joggers-cargo-de-nailon---Beige---H-M-PE.jpg" alt="">
-            <img class="cargo" src="Pantalones/Jogger cargo de nailon/Joggers-cargo-de-nailon---Beige---H-M-PE (1).jpg" alt="">
-        </section>
+  <main>
+    <section>
+      <img id="Prod-Main" class="cargo" src="Pantalones/Jogger cargo de nailon/hd/1.jpg" alt="">
+      <img class="cargo" src="Pantalones/Jogger cargo de nailon/2.png" alt="">
+    </section>
 
-        <aside>
-            <h1 class="pantalon-titulo" >Jogger Cargo de Nailón</h1>
-            <h3 class="pantalon-precio" >S/ 109.00</h3>
-            <h4>Colores</h4>
-            <div class="Contenedor-pequeño">
-                <img class="pant-pequeño" src="Pantalones/Jogger cargo de nailon/Joggers-cargo-de-nailon---Beige---H-M-PE (1).jpg" alt="">
-                <img class="pant-pequeño" src="Pantalones/Jogger cargo de nailon/Joggers-cargo-de-nailon---Negro---H-M-PE.jpg" alt="">
-            </div>
-            <h4>Tallas</h4>
-            <div class="Contenedor-Tallas">
-                <button class="Producto-Tallas">S</button>
-                <button class="Producto-Tallas">M</button>
-                <button class="Producto-Tallas">L</button>
-                <button class="Producto-Tallas">XL</button>
-                <button class="Producto-Tallas">XXL</button>
-              </div>
-              <h4>Guia de Tallas</h4>
-              <button>
-                <img src="Iconos/carrito-de-compras.png" alt="">
-                <p>Agregar</p>
-              </button>
-        </aside>
-    </main>
+    <aside>
+      <h1 id="Producto-Titulo" class="pantalon-titulo">Jogger Cargo de Nailón</h1>
+      <div class="contenedorPrecio">
+        <h3 class="Simbolo-Precio">S/</h3>
+        <h3 id="Producto-Precio" class="pantalon-precio Producto-Precio">129.00</h3>
+      </div>
+      <h4>Colores</h4>
+      <div class="Contenedor-pequeño">
+        <img id="Aux1" class="pant-pequeño"
+          src="Pantalones/Jogger cargo de nailon/Joggers-cargo-de-nailon---Beige---H-M-PE (1).jpg" alt="">
+        <img id="Aux2" class="pant-pequeño"
+          src="Pantalones/Jogger cargo de nailon/Joggers-cargo-de-nailon---Negro---H-M-PE.jpg" alt="">
+      </div>
+      <h4>Tallas</h4>
+      <div class="Contenedor-Tallas">
+        <button class="Producto-Tallas">S</button>
+        <button class="Producto-Tallas">M</button>
+        <button class="Producto-Tallas">L</button>
+        <button class="Producto-Tallas">XL</button>
+        <button class="Producto-Tallas">XXL</button>
+      </div>
+      <h4>Guia de Tallas</h4>
+      <button id="Btn-Agregar">
+        <img src="Iconos/carrito-de-compras.png" alt="">
+        <p>Agregar</p>
+      </button>
+    </aside>
+  </main>
 
 
   <footer>
@@ -117,5 +124,6 @@
   </footer>
 </body>
 
-</body>
+<script src="JavaScript/productos.js"></script>
+
 </html>
