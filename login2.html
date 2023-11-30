@@ -7,9 +7,12 @@
     <title>Unreal</title>
     <link rel="stylesheet" href="Estilos/Login2.css">
     <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
+    <script src="JavaScript/src.js"></script>
 </head>
 
 <body>
+    <div id="mensaje" class="mensaje"></div> <!-- Aquí se mostrarán los mensajes emergentes -->
+    
     <section>
         <img class="logotipo" src="Logos/Unreal logo.png" alt="" width="10%">
         <article>
@@ -31,7 +34,7 @@
             </div>
         </article>
         <article class="inicio">
-            <a href="#" class="boton1">Iniciar sesion</a>
+            <a href="#" class="boton1" onclick="validarCorreoYContraseña()" >Iniciar sesion</a>
         </article>
         <article class="cuenta">
             <h2>¿No tienes una cuenta?</h2>
@@ -55,3 +58,4 @@
         </video>
     </div>
 </body>
+

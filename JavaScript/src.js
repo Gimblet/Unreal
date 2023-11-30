@@ -200,6 +200,29 @@ function agregarElementosExistentes(elementoCarrito, numeroElemento) {
 }
 
 //? --------------------------------------------------------------------------------------------------------
+//**VALIDACION DE CORREO// */
+
+function validarCorreoYContraseña() {
+  const email = document.querySelector('.correo').value;
+  const password = document.querySelector('.contraseña').value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9]).{8,}$/;
+
+  //Que se pueda registrar un correo valido en el formulario
+  if (!emailRegex.test(email)) {
+      alert('Por favor, introduce un correo electrónico válido');
+      return;
+  }
+
+  //Condicion para la contraseña//
+  if (!passwordRegex.test(password)) {
+      alert('La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula y un número.');
+      return; 
+  }
+
+  
+  alert('Inicio de sesión exitoso'); // Mensaje temporal
+}
 
 //! ---------------------------------- On Load ----------------------------------
 
