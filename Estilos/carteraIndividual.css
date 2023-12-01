@@ -283,6 +283,10 @@ button:hover {
   display: flex;
 }
 
+.linkfot:hover {
+  cursor: pointer;
+}
+
 .contenedorFooterContenidos {
   margin-top: 1.5%;
   margin-bottom: 1.5%;

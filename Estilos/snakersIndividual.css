@@ -290,7 +290,7 @@ button p {
   color: white;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
@@ -306,6 +306,10 @@ button:hover{
   margin-top: 1.5%;
   margin-bottom: 1.5%;
   justify-content: space-around;
+}
+
+.linkfot:hover {
+  cursor: pointer;
 }
 
 hr {
