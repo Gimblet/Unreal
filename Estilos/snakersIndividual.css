@@ -310,6 +310,7 @@ button:hover {
 
 .linkfot:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 hr {
