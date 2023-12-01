@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "QuickSand-Regular";
+  src: url("../Fuentes/QuickSand/Quicksand-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: QuickSand-Regular;
+  letter-spacing: 0.3;
+}
+
+p,
+a {
+  font-weight: 500;
+}
+
+span {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+div{
+  position: absolute;
+  top: 50%;
+}
