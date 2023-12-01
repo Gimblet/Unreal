@@ -316,6 +316,11 @@ video {
     cursor: pointer;
 }
 
+.linkfot:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /*! ///////////// Footer /////////////// */
 
 .contenedorFooterContenidos,

@@ -283,6 +283,11 @@ button:hover {
   display: flex;
 }
 
+.linkfot:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .contenedorFooterContenidos {
   margin-top: 1.5%;
   margin-bottom: 1.5%;

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
-    <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
-    <title>Jogger Cargo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Caraterísticas/caracteristicaPan.css">
+  <link rel="shortcut icon" href="Logos/Unreal logo.png" type="image/x-icon">
+  <title>Jogger Cargo</title>
 </head>
+
 <body>
   <div onclick="cerrarCarrito()" id="dim"></div>
   <header>
     <div class="headerContainer" id="headerContainerId">
       <nav>
         <ul class="navnom">
-          <li><a class="color" href="../Pages/catalogos.html">Catalogo</a></li>
-          <li><a class="color" href="../Pages/contacto.html">Contacto</a></li>
-          <li><a class="color" href="../Pages/Servicios.html">Servicios</a></li>
+          <li><a class="color" href="catalogos.html">Catalogo</a></li>
+          <li><a class="color" href="contacto.html">Contacto</a></li>
+          <li><a class="color" href="servicios.html">Servicios</a></li>
         </ul>
       </nav>
       <div class="logo">
@@ -33,22 +35,22 @@
     </div>
   </header>
 
-    <div class="Menu-Prueba" id="General">
-      <div class="topMenu">
-        <h2>Mi Colección</h2>
-        <h3 onclick="cerrarCarrito()">X</h3>
-      </div>
-      <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
-      </div>
-      <div class="bottomMenu">
-        <div class="contenedorTotalCarrito">
-          <h4>Total</h4>
-          <h4 id="precioTotal">Carrito Vacio</h4>
-        </div>
-        <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
-        <button class="boton">Confirmar Compra</button>
-      </div>
+  <div class="Menu-Prueba" id="General">
+    <div class="topMenu">
+      <h2>Mi Colección</h2>
+      <h3 onclick="cerrarCarrito()">X</h3>
     </div>
+    <div class="contentMenu"> <!-- Dejar Vacio Que se Llena A traves de JavaScript -->
+    </div>
+    <div class="bottomMenu">
+      <div class="contenedorTotalCarrito">
+        <h4>Total</h4>
+        <h4 id="precioTotal">Carrito Vacio</h4>
+      </div>
+      <h4 id="limpiarCarro" onclick="limpiarCarrito()">Eliminar Todo</h4>
+      <button class="boton">Confirmar Compra</button>
+    </div>
+  </div>
 
   <main id="Pantalones">
     <section>
@@ -86,24 +88,24 @@
     <div class="contenedorFooterContenidos">
       <div class="contenedorFooterLinks">
         <h1>COMPAÑIA</h1>
-        <a href="#">Fundación Unreal</a>
-        <a href="#">Grupo Unreal</a>
-        <a href="#">Sostenibilidad</a>
-        <a href="#">Trabaja con Nosotros</a>
+        <a class="linkfot" href="#">Fundación Unreal</a>
+        <a class="linkfot" href="#">Grupo Unreal</a>
+        <a class="linkfot" href="#">Sostenibilidad</a>
+        <a class="linkfot" href="#">Trabaja con Nosotros</a>
       </div>
       <div class="contenedorFooterLinks">
         <h1>TERMINOS Y CONDICIONES LEGALES</h1>
-        <a href="#">Aviso Legal</a>
-        <a href="#">Politica de Privacidad</a>
-        <a href="#">Politica de Cookies</a>
-        <a href="#">Mapa del Sitio</a>
+        <a class="linkfot" href="#">Aviso Legal</a>
+        <a class="linkfot" href="#">Politica de Privacidad</a>
+        <a class="linkfot" href="#">Politica de Cookies</a>
+        <a class="linkfot" href="#">Mapa del Sitio</a>
       </div>
       <div class="footerRedesSociales">
-        <a href=""><img class="footerRSI" src="Redes Sociales/Nrs1.png" alt=""></a>
-        <a href=""><img class="footerRSI" src="Redes Sociales/Nrs2.png" alt=""></a>
-        <a href=""><img class="footerRSI" src="Redes Sociales/Nrs3.png" alt=""></a>
-        <a href=""><img class="footerRSI" src="Redes Sociales/Nrs4.png" alt=""></a>
-        <a href=""><img class="footerRSI" src="Redes Sociales/Nrs5.png" alt=""></a>
+        <a href="https://facebook.com"><img class="footerRSI" src="Redes Sociales/Nrs1.png" alt=""></a>
+        <a href="https://twitter.com"><img class="footerRSI" src="Redes Sociales/Nrs2.png" alt=""></a>
+        <a href="https://instagram.com"><img class="footerRSI" src="Redes Sociales/Nrs3.png" alt=""></a>
+        <a href="https://youtube.com"><img class="footerRSI" src="Redes Sociales/Nrs4.png" alt=""></a>
+        <a href="https://whatsapp.com"><img class="footerRSI" src="Redes Sociales/Nrs5.png" alt=""></a>
       </div>
     </div>
     <hr>
@@ -116,6 +118,7 @@
     </div>
   </footer>
 </body>
-  
+
 <script src="JavaScript/productos.js"></script>
+
 </html>
